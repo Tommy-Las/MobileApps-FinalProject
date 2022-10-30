@@ -11,73 +11,78 @@ Unit 8: Group 10 Milestone
 
 ## Overview
 ### Description
-Tracks what music an individual listens to, and pairs them with others based on that music. Could be potentially used as a dating app, or just meeting new friends with similar music tastes.
+Our application aims to provide small scale businesses an outlet to recommend their products to both new and existing customers. 
 
 ### App Evaluation
-- **Category:** Social Networking / Music
-- **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a computer, such as tinder or other similar apps. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
-- **Story:** Analyzes users music choices, and connects them to other users with similar choices. The user can then decide to message this person and befriend them if wanted.
-- **Market:** Any individual could choose to use this app, and to keep it a safe environment, people would be organized into age groups.
-- **Habit:** This app could be used as often or unoften as the user wanted depending on how deep their social life is, and what exactly they're looking for.
-- **Scope:** First we would start with pairing people based on music taste, then perhaps this could evolve into a music sharing application as well to broaden its usage. Large potential for use with spotify, apple music, or other music streaming applications.
+- **Category:** Shopping
+- **Mobile:** Our application would be designed to predominately run on mobile devices.
+- **Story:** Evaluates users grocery item requests and recommends a variety of options from different retailers.
+- **Market:** Individuals that need a method of organizing their shopping list before going out to make purchases.
+- **Habit:** Our application focuses on convenience and accessibility, making it a viable tool to use anytime our users require grocery items.
+- **Scope:** Our application eventually aims to further enhance user experience by enabling more personable services. One of these services includes recommending products related to frequent purchases made by the user.
 
 ## Product Spec
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
 
-* User logs in to access previous chats and preference settings
-* User picks what their favorite artist/genre/etc. (Think Spotify interface)
-* Matches have a chat window to get to know each other, with the ability to skip music and unmatch (Tinder Style).
-* Profile pages for each user
-* Settings (Accesibility, Notification, General, etc.)
+* The user must be able to search for items
+* The user must be able to log in upon opening application
+* The system must display each item's price, location, and picture
+* The user must be able to create a shopping list
+* The user must be able to edit and delete a shopping list
+* The user must be able to add and remove items to their shopping list
+
 
 **Optional Nice-to-have Stories**
 
-* Log of past songs/people with album art covers matching
-* Page of most played songs (i.e. songs that most users are connecting through)
-* Profile Add-On: Top music choices, etc.
-* Optional Shuffle Button (i.e. random encounter/random song)
-* Listening/Encounter Queue
+* The user should be able to review products
+* The system should be able to recommend related products
+* The user should be able to customize their account
+* The system should organize products into categories
+* The user should be able to favorite specific products
+
 
 ### 2. Screen Archetypes
 
-* Login 
-* Register - User signs up or logs into their account
-   * Upon Download/Reopening of the application, the user is prompted to log in to gain access to their profile information to be properly matched with another person. 
-   * ...
-* Messaging Screen - Chat for users to communicate (direct 1-on-1)
-   * Upon selecting music choice users matched and message screen opens
-* Profile Screen 
-   * Allows user to upload a photo and fill in information that is interesting to them and others
-* Song Selection Screen.
-   * Allows user to be able to choose their desired song, artist, genre of preference and begin listening and interacting with others.
-* Settings Screen
-   * Lets people change language, and app notification settings.
+* Login - User logs in or registers for an account
+   * When user opens application, the system must prompt the user to enter login credentials 
+* List Screen - User can manage created shopping lists 
+   * Allows user to create new grocery lists
+   * Allows user to edit and delete current lists
+* Search Screen - Displays a variety of potential options of item
+   * Permits user to view available options of required item
+* Product Screen - Displays product information
+   * Display product's price, picture and location
+   * Allows user to add it to their shopping list
+* Single List Screen - Displays all products from a specific list
+   * Allows users to add items to grocery list
+   * Allows users to remove items from the shopping list
+   * Allows users to select a product to display more information about it.
+
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* Music selection
-* Profile
-* Settings
+* Lists
+* Browse
 
 Optional:
-* Music/Encounter Queue
-* Discover (Top Choices)
+* Settings
+* Favorites
 
 **Flow Navigation** (Screen to Screen)
-* Forced Log-in -> Account creation if no log in is available
-* Music Selection (Or Queue if Optional) -> Jumps to Chat
-* Profile -> Text field to be modified. 
-* Settings -> Toggle settings
+* 
+* 
+* 
+* 
 
 ## Wireframes
-<img src="https://i.imgur.com/9CrjH1K.jpg" width=800><br>
+
 
 ### [BONUS] Digital Wireframes & Mockups
-<img src="https://i.imgur.com/lYHn37F.jpg" height=200>
+
 
 ### [BONUS] Interactive Prototype
-<img src="https://i.imgur.com/AiKfE5g.gif" width=200>
+
