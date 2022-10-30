@@ -79,10 +79,10 @@ Optional:
 * 
 
 ## Wireframes
-
+![Wireframes-group10](https://user-images.githubusercontent.com/98708908/198906171-c0d84438-4f51-4531-9965-6d4dc4fe8321.JPG)
 
 ### [BONUS] Digital Wireframes & Mockups
-
+https://www.figma.com/file/uuzEEKftJPLsdXoHxjeNd8/List-App-Wireframe?node-id=0%3A1
 
 ### [BONUS] Interactive Prototype
 
