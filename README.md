@@ -73,10 +73,28 @@ Optional:
 * Favorites
 
 **Flow Navigation** (Screen to Screen)
-* 
-* 
-* 
-* 
+* Landing page
+   * Login / Signup
+* Login / Signup:
+   * Homepage
+* Homepage
+   * Create new list
+   * Access a list
+   * Delete a list
+   * Logout 
+* Single List Screen
+   * Logout
+   * Homepage
+   * Logout
+* Product Screen
+   * Add item
+   * Logout
+   * Single List page
+* Search product
+   * List page
+   * Product
+   * Logout
+
 
 ## Wireframes
 ![Wireframes-group10](https://user-images.githubusercontent.com/98708908/198906171-c0d84438-4f51-4531-9965-6d4dc4fe8321.JPG)
