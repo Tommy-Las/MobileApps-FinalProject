@@ -84,5 +84,11 @@ Optional:
 ### [BONUS] Digital Wireframes & Mockups
 https://www.figma.com/file/uuzEEKftJPLsdXoHxjeNd8/List-App-Wireframe?node-id=0%3A1
 
+[IMG]https://imgur.com/THOAcL9[/IMG]
 ### [BONUS] Interactive Prototype
+
+Link to gif animation demonstrating interactive prototype:
+https://media2.giphy.com/media/62pdf8aIrIXgocXGcP/giphy.gif?cid=790b761166aa76aad07a95592f4cf7b86516f60adb95078e&rid=giphy.gif
+
+[IMG]https://media2.giphy.com/media/62pdf8aIrIXgocXGcP/giphy.gif?cid=790b761166aa76aad07a95592f4cf7b86516f60adb95078e&rid=giphy.gif[/IMG]
 
