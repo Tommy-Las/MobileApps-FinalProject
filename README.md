@@ -108,6 +108,99 @@ https://www.figma.com/file/uuzEEKftJPLsdXoHxjeNd8/List-App-Wireframe?node-id=0%3
 ![Interactive-group10](https://media2.giphy.com/media/62pdf8aIrIXgocXGcP/giphy.gif?cid=790b761166aa76aad07a95592f4cf7b86516f60adb95078e&rid=giphy.gif)
 
 
+## Schema 
+
+### Models
+
+| Property | Type | Description|
+|:--------:|:------:|:------------:|
+| listID | String | Identification for one list in the various lists we use. |
+| listName | String | A specific name for a list in use. |
+| listArray | Array of products | An array of the products. |
+| productID | String | Every item carries an identification point of some kind.  |
+| productPrice | Double | This is the price of the item.  |
+| productID | String | Every item carries an identification point of some kind.  |
+| productImage | File | This involves an image of the product. This will be found using the api.  |
+| productName | String | This is the name of the item.  |
+| quantity | Int | This represents the amount of a specific item the user wishes to purchase.  |
+| caloriesVal | Int | Number of calories in a unit.  |
 
 
-Quick Test
+
+
+
+
+### Networking
+
+**List of network requests by screen**
+
+- Homepage: 
+  - (GET) Retrieve all lists
+    ```swift
+    let query = PFQuery(className: "Lists")
+    //query.includeKey("author")
+    query.includeKeys(["listid", "listname"])
+    query.limit = 20        
+    query.findObjectsInBackground { (lists, error) in
+       if lists != nil {
+          self.lists = lists!
+          self.tableView.reloadData()
+       }
+    }
+    ```
+  - (DELETE) Delete a list
+  
+* Accessing API:
+  * (GET) Item name, ID, image
+    ```swift
+    let url = URL(string: "_______")!
+    var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
+     
+    // Insert API Key to request
+    request.setValue("Bearer \(apikey)", forHTTPHeaderField: "Authorization")
+    let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+    let task = session.dataTask(with: request) { (data, response, error) in
+      // This will run when the network request returns
+      if let error = error {
+         print(error.localizedDescription)
+      } else if let data = data {
+             let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+             let restDictionaries = dataDictionary["_______"] as! [[String: Any]]
+             var lists: [List] = []
+ 
+             for dictionary in restDictionaries {
+                 let list = List.init(dict: dictionary)
+                 lists.append(list) 
+             }
+                return completion(lists)
+         }
+      }
+
+        cell.productn.text = list["productn"] as? String ?? ""
+    
+    		cell.productid.text = restaurant["productid"] as? String ?? ""
+        
+    
+    if let imageUrlString = restaurant["image_url"] as? String {
+        let imageUrl = URL(string: imageUrlString)
+        cell.productImage.af.setImage(withURL: imageUrl!)
+    }
+
+
+    ```
+* Create List Page:
+  * (POST) Create new list
+* Search Page:
+  * (GET) Search a product by its name
+  * (POST) Add product to a specific list
+*Single List Page:
+  * (GET) Get all products in a specific list
+  * (DELETE) Delete a product from a list
+  * (PUT) Edit quantity of a product
+* Single Product Page:
+  * (GET) Get product information
+
+
+** [OPTIONAL: Existing API Endpoints **
+** Chomp Food & Recipe Database API **
+* Base URL: https://chompthis.com/api/v2/
