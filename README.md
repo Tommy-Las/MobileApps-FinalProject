@@ -201,6 +201,11 @@ https://www.figma.com/file/uuzEEKftJPLsdXoHxjeNd8/List-App-Wireframe?node-id=0%3
   * (GET) Get product information
 
 
-** [OPTIONAL: Existing API Endpoints **
-** Chomp Food & Recipe Database API **
+#### [OPTIONAL: Existing API Endpoints ####
+**Chomp Food & Recipe Database API**
 * Base URL: https://chompthis.com/api/v2/
+
+| HTTP Verb | Endpoint | Description |
+|:--------:|:------:|:------------:|
+| GET | /food/branded/name.php | Get a branded food item by name. |
+
