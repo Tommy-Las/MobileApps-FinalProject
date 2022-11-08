@@ -200,6 +200,37 @@ https://www.figma.com/file/uuzEEKftJPLsdXoHxjeNd8/List-App-Wireframe?node-id=0%3
 * Single Product Page:
   * (GET) Get product information
 
+## Sprint Outline 
+(Specifics were done using the github repository itself. 
+
+Sprint Plan in place using GitHub project management flow.
+GitHub Project created (1pt)
+https://github.com/Tommy-Las/MobileApps-FinalProject
+
+
+
+GitHub Milestones created (1pt)
+https://trello.com/b/gdfqPBj5/shoppy-board
+(This will be used for every sprint!)
+(Currently set up as issues on the repository!)
+
+Week 1: All classes and main storyboards will be set in place. 
+
+Week 2: Implementation of API requests and progression between boards. 
+
+Week 3: Continuing to work on the progression between board and a base working version of the project.
+
+Week 4: Polish the existing application. Deal with any existing bugs with current deployment. 
+
+
+
+GitHub Issues created from user stories (2pts)
+In our github project.
+
+
+Issues added to project and assigned to specific team members (1pt)
+In our github project.
+
 
 #### [OPTIONAL: Existing API Endpoints ####
 **Chomp Food & Recipe Database API**
