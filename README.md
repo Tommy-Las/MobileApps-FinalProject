@@ -190,7 +190,7 @@ https://www.figma.com/file/uuzEEKftJPLsdXoHxjeNd8/List-App-Wireframe?node-id=0%3
     ```
 * Create List Page:
   * (POST) Create new list
-```
+```swift
 let list = PFObject(className: "Lists")
 list["name"] = listName.text
 list["products"] = [PFObject]() //array of products
@@ -205,7 +205,7 @@ list.saveInBackground { (success, error) in
 ```
 * Search Page:
   * (GET) Search a product by its name
-```
+```swift
 let query = PFQuery(className:"catalogItems")
 query.whereKey("name", equalTo: "nameLabel.text") 
 query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
@@ -223,7 +223,7 @@ for object in objects {
 }
 ```
   * (POST) Add product to a specific list
-```
+```swift
 let product = PFObject(className: "Products") //Oliver note: Create a new “blank” Products object
     	product["name"] = nameLabel.text //Oliver note: Use text input fields for the new Products object
     	product["quantity"] = quantity.text //Oliver note: Same thing
