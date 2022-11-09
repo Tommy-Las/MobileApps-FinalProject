@@ -190,15 +190,66 @@ https://www.figma.com/file/uuzEEKftJPLsdXoHxjeNd8/List-App-Wireframe?node-id=0%3
     ```
 * Create List Page:
   * (POST) Create new list
+```
+let list = PFObject(className: "Lists")
+list["name"] = listName.text
+list["products"] = [PFObject]() //array of products
+list["author"] = PFUser.current()!
+list.saveInBackground { (success, error) in
+        	if success {
+        		print("List saved successfully") }
+        	else{
+        		print("Error: \(error)")
+        	}
+}
+```
 * Search Page:
   * (GET) Search a product by its name
+```
+let query = PFQuery(className:"catalogItems")
+query.whereKey("name", equalTo: "nameLabel.text") 
+query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
+	if let error = error {
+		print(error.localizedDescription)
+	} else if let objects = objects {
+		print("Item found, found \(objects.count) unique entries of the item with the name")
+for object in objects {
+//Oliver note: hopefully this prints only once
+	print("Product name: \(Object.name), Product price: \(Object.price), Product image: \(Object.image)") 
+	Break 
+		}
+	}
+
+}
+```
   * (POST) Add product to a specific list
+```
+let product = PFObject(className: "Products") //Oliver note: Create a new “blank” Products object
+    	product["name"] = nameLabel.text //Oliver note: Use text input fields for the new Products object
+    	product["quantity"] = quantity.text //Oliver note: Same thing
+    	product["price"] = price.text //Oliver note: Same thing
+ 
+    	
+selectedList.add(product, forKey: "Products") //Oliver note: append a (the new) Products object to the current shopping list
+    	selectedList.saveInBackground {   (success, error) in //Oliver note: This simply saves it…
+        		if success {
+        			print("Product saved successfully")
+}	else	{
+        			print("Error: \(error)")
+        		}
+}
+
+```
 *Single List Page:
   * (GET) Get all products in a specific list
+```
+Let productList = selectedList["Products"] as? [PFObject] //Oliver note: return array(?) of products assigned to a specific shopping list
+```
   * (DELETE) Delete a product from a list
-  * (PUT) Edit quantity of a product
-* Single Product Page:
-  * (GET) Get product information
+```
+selectedList.remove(product, forKey: "Products")
+```
+
 
 ## Sprint Outline 
 (Specifics were done using the github repository itself. 
