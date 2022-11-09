@@ -242,11 +242,11 @@ selectedList.add(product, forKey: "Products") //Oliver note: append a (the new) 
 ```
 *Single List Page:
   * (GET) Get all products in a specific list
-```
+```swift
 Let productList = selectedList["Products"] as? [PFObject] //Oliver note: return array(?) of products assigned to a specific shopping list
 ```
   * (DELETE) Delete a product from a list
-```
+```swift
 selectedList.remove(product, forKey: "Products")
 ```
 
