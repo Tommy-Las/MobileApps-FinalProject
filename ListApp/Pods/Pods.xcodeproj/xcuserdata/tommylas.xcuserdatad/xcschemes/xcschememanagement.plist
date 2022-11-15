@@ -7,17 +7,29 @@
 		<key>Alamofire.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>6</integer>
+=======
+			<integer>5</integer>
+>>>>>>> 770feaaf553238f17ca25e4b4aba7caa21207273
 		</dict>
 		<key>AlamofireImage.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>4</integer>
+=======
+			<integer>7</integer>
+>>>>>>> 770feaaf553238f17ca25e4b4aba7caa21207273
 		</dict>
 		<key>Bolts.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>2</integer>
+=======
+			<integer>0</integer>
+>>>>>>> 770feaaf553238f17ca25e4b4aba7caa21207273
 		</dict>
 		<key>MessageInputBar.xcscheme_^#shared#^_</key>
 		<dict>
@@ -32,7 +44,11 @@
 		<key>Parse.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>8</integer>
+=======
+			<integer>2</integer>
+>>>>>>> 770feaaf553238f17ca25e4b4aba7caa21207273
 		</dict>
 		<key>Pods-ListApp-ListAppUITests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -42,12 +58,20 @@
 		<key>Pods-ListApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>5</integer>
+=======
+			<integer>3</integer>
+>>>>>>> 770feaaf553238f17ca25e4b4aba7caa21207273
 		</dict>
 		<key>Pods-ListAppTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>7</integer>
+=======
+			<integer>6</integer>
+>>>>>>> 770feaaf553238f17ca25e4b4aba7caa21207273
 		</dict>
 	</dict>
 </dict>
