@@ -298,3 +298,6 @@ In our github project.
 <img src='http://g.recordit.co/C7LYQccNG2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <img src='http://g.recordit.co/DZzgW54EtS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src='http://g.recordit.co/DwcNJ8KZLZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
