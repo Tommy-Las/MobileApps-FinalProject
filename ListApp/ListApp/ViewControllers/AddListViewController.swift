@@ -9,13 +9,16 @@ import UIKit
 
 class AddListViewController: UIViewController {
 
+    @IBOutlet weak var listTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func createList(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
