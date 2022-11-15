@@ -291,3 +291,10 @@ In our github project.
 |:--------:|:------:|:------------:|
 | GET | /food/branded/name.php | Get a branded food item by name. |
 
+
+
+
+
+<img src='http://g.recordit.co/C7LYQccNG2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src='http://g.recordit.co/DZzgW54EtS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
