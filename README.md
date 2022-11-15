@@ -26,21 +26,21 @@ Our application aims to provide small scale businesses an outlet to recommend th
 
 **Required Must-have Stories**
 
-* The user must be able to search for items
-* The user must be able to log in upon opening application
-* The system must display each item's price, location, and picture
-* The user must be able to create a shopping list
-* The user must be able to edit and delete a shopping list
-* The user must be able to add and remove items to their shopping list
+- [ ] The user must be able to search for items
+- [x] The user must be able to log in upon opening application
+- [ ] The system must display each item's price, location, and picture
+- [ ] The user must be able to create a shopping list
+- [ ] The user must be able to edit and delete a shopping list
+- [ ] The user must be able to add and remove items to their shopping list
 
 
 **Optional Nice-to-have Stories**
 
-* The user should be able to review products
-* The system should be able to recommend related products
-* The user should be able to customize their account
-* The system should organize products into categories
-* The user should be able to favorite specific products
+- [ ] The user should be able to review products
+- [ ] The system should be able to recommend related products
+- [ ] The user should be able to customize their account
+- [ ] The system should organize products into categories
+- [ ] The user should be able to favorite specific products
 
 
 ### 2. Screen Archetypes
@@ -290,4 +290,17 @@ In our github project.
 | HTTP Verb | Endpoint | Description |
 |:--------:|:------:|:------------:|
 | GET | /food/branded/name.php | Get a branded food item by name. |
+
+
+
+
+
+<img src='http://g.recordit.co/C7LYQccNG2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src='http://g.recordit.co/DZzgW54EtS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src='http://g.recordit.co/DwcNJ8KZLZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+App Logo:
+<img src='https://i.imgur.com/0dxmwuS.png' title='App Logo' width='' alt='App Logo' />
 
