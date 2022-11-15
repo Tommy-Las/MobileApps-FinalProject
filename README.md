@@ -301,5 +301,6 @@ In our github project.
 
 <img src='http://g.recordit.co/DwcNJ8KZLZ.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
+App Logo:
 <img src='https://i.imgur.com/0dxmwuS.png' title='App Logo' width='' alt='App Logo' />
 
