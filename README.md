@@ -26,21 +26,21 @@ Our application aims to provide small scale businesses an outlet to recommend th
 
 **Required Must-have Stories**
 
-* The user must be able to search for items
-* The user must be able to log in upon opening application
-* The system must display each item's price, location, and picture
-* The user must be able to create a shopping list
-* The user must be able to edit and delete a shopping list
-* The user must be able to add and remove items to their shopping list
+- [ ] The user must be able to search for items
+- [x] The user must be able to log in upon opening application
+- [ ] The system must display each item's price, location, and picture
+- [ ] The user must be able to create a shopping list
+- [ ] The user must be able to edit and delete a shopping list
+- [ ] The user must be able to add and remove items to their shopping list
 
 
 **Optional Nice-to-have Stories**
 
-* The user should be able to review products
-* The system should be able to recommend related products
-* The user should be able to customize their account
-* The system should organize products into categories
-* The user should be able to favorite specific products
+- [ ] The user should be able to review products
+- [ ] The system should be able to recommend related products
+- [ ] The user should be able to customize their account
+- [ ] The system should organize products into categories
+- [ ] The user should be able to favorite specific products
 
 
 ### 2. Screen Archetypes
