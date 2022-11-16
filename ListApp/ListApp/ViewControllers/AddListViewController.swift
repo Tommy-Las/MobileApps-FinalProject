@@ -24,10 +24,6 @@ class AddListViewController: UIViewController {
         print("testing")
     }
     
-    @IBAction func goBack(_ sender: Any) {
-    
-    }
-    
     /*
     // MARK: - Navigation
 
