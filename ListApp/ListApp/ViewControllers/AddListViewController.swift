@@ -9,7 +9,11 @@ import UIKit
 
 class AddListViewController: UIViewController {
 
-    @IBOutlet weak var listTextField: UITextField!
+    
+    @IBOutlet weak var createListButton: UIButton!
+    @IBOutlet weak var newListName: UITextField!
+    @IBOutlet weak var goBackButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +21,11 @@ class AddListViewController: UIViewController {
     }
     
     @IBAction func createList(_ sender: Any) {
+        print("testing")
+    }
+    
+    @IBAction func goBack(_ sender: Any) {
+    
     }
     
     /*

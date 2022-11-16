@@ -1,0 +1,22 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "cefe2cf51d048851f6ef1609f0bedf1144185416569745bb011201f46ef3a8b2"
+build_start_time: [1668552288, 458534955]
+build_end_time: [1668552289, 922329902]
+inputs:
+  ? "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Controls/InputBarButtonItem.swift"
+  : !dirty [1668530149, 582759380]
+  ? "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Extensions/NSMutableAttributedString+Extensions.swift"
+  : !dirty [1668530149, 583273410]
+  ? "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Extensions/UIView+Extensions.swift"
+  : !dirty [1668530149, 583533048]
+  "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/MessageInputBar.swift": !dirty [1668530149, 583979606]
+  ? "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Models/NSConstraintLayoutSet.swift"
+  : !dirty [1668530149, 584381341]
+  "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Protocols/InputItem.swift": !dirty [1668530149, 584910154]
+  ? "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Protocols/InputPlugin.swift"
+  : !dirty [1668530149, 585176944]
+  ? "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Protocols/MessageInputBarDelegate.swift"
+  : !dirty [1668530149, 587912559]
+  "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Views/InputStackView.swift": !dirty [1668530149, 588278770]
+  "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Views/InputTextView.swift": !dirty [1668530149, 588453769]
+  "/Users/tommylas/Documents/FAU/MobileApps/MobileApps-FinalProject/ListApp/Pods/MessageInputBar/Sources/Views/SeparatorLine.swift": !dirty [1668530149, 588630676]
