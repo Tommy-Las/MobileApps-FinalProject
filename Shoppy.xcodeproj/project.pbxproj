@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B1233E8292664F8005BA2D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1233E7292664F8005BA2D9 /* AppDelegate.swift */; };
+		7B1233EA292664F8005BA2D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1233E9292664F8005BA2D9 /* SceneDelegate.swift */; };
+		7B1233EF292664F8005BA2D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1233ED292664F8005BA2D9 /* Main.storyboard */; };
+		7B1233F1292664FA005BA2D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B1233F0292664FA005BA2D9 /* Assets.xcassets */; };
+		7B1233F4292664FA005BA2D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B1233F2292664FA005BA2D9 /* LaunchScreen.storyboard */; };
+		7B1233FF292664FA005BA2D9 /* ShoppyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1233FE292664FA005BA2D9 /* ShoppyTests.swift */; };
+		7B97E2352927E049004292C5 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97E2342927E049004292C5 /* ItemViewCell.swift */; };
+		7BBE9BF82926DF9E00700F19 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE9BF72926DF9E00700F19 /* ItemsViewController.swift */; };
+		7BF298ED292666A900123545 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF298EC292666A900123545 /* LoginViewController.swift */; };
+		7BF298EF292666B900123545 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF298EE292666B900123545 /* ListViewController.swift */; };
+		7BF298F12926866300123545 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF298F02926866300123545 /* ListCell.swift */; };
+		7BF298F32926878700123545 /* AddListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF298F22926878700123545 /* AddListViewController.swift */; };
+		BDFD02CA7702A76926584F50 /* Pods_Shoppy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93A30CD448FB52C952B1D81 /* Pods_Shoppy.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B1233FB292664FA005BA2D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B1233DC292664F8005BA2D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B1233E3292664F8005BA2D9;
+			remoteInfo = "Shoppy-Falcone";
+		};
+		7B123405292664FA005BA2D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B1233DC292664F8005BA2D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B1233E3292664F8005BA2D9;
+			remoteInfo = "Shoppy-Falcone";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6FB09C69ED9FC99212E7E71B /* Pods-Shoppy-Falcone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppy-Falcone.release.xcconfig"; path = "Target Support Files/Pods-Shoppy-Falcone/Pods-Shoppy-Falcone.release.xcconfig"; sourceTree = "<group>"; };
+		7B1233E4292664F8005BA2D9 /* Shoppy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoppy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B1233E7292664F8005BA2D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7B1233E9292664F8005BA2D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7B1233EE292664F8005BA2D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B1233F0292664FA005BA2D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7B1233F3292664FA005BA2D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7B1233F5292664FA005BA2D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B1233FA292664FA005BA2D9 /* ShoppyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B1233FE292664FA005BA2D9 /* ShoppyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppyTests.swift; sourceTree = "<group>"; };
+		7B123404292664FA005BA2D9 /* ShoppyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B384E7829290B5600C29BD4 /* What needs to be finished.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "What needs to be finished.h"; sourceTree = "<group>"; };
+		7B97E2342927E049004292C5 /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
+		7BBE9BF72926DF9E00700F19 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		7BF298EC292666A900123545 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7BF298EE292666B900123545 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		7BF298F02926866300123545 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		7BF298F22926878700123545 /* AddListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewController.swift; sourceTree = "<group>"; };
+		8A57C2CB7530005F70659EB4 /* Pods-Shoppy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppy.debug.xcconfig"; path = "Target Support Files/Pods-Shoppy/Pods-Shoppy.debug.xcconfig"; sourceTree = "<group>"; };
+		B85093130973B17085A62610 /* Pods-Shoppy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppy.release.xcconfig"; path = "Target Support Files/Pods-Shoppy/Pods-Shoppy.release.xcconfig"; sourceTree = "<group>"; };
+		D2A04CBDC7A23AF18AD582F1 /* Pods-Shoppy-Falcone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppy-Falcone.debug.xcconfig"; path = "Target Support Files/Pods-Shoppy-Falcone/Pods-Shoppy-Falcone.debug.xcconfig"; sourceTree = "<group>"; };
+		D93A30CD448FB52C952B1D81 /* Pods_Shoppy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoppy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B1233E1292664F8005BA2D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDFD02CA7702A76926584F50 /* Pods_Shoppy.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B1233F7292664FA005BA2D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B123401292664FA005BA2D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14AF8D8A7241249B6FFB9085 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D93A30CD448FB52C952B1D81 /* Pods_Shoppy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B1233DB292664F8005BA2D9 = {
+			isa = PBXGroup;
+			children = (
+				7B1233E6292664F8005BA2D9 /* Shoppy */,
+				7B1233FD292664FA005BA2D9 /* Shoppytests */,
+				7B1233E5292664F8005BA2D9 /* Products */,
+				EC83F9AF250B1175008806CC /* Pods */,
+				14AF8D8A7241249B6FFB9085 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7B1233E5292664F8005BA2D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B1233E4292664F8005BA2D9 /* Shoppy.app */,
+				7B1233FA292664FA005BA2D9 /* ShoppyTests.xctest */,
+				7B123404292664FA005BA2D9 /* ShoppyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B1233E6292664F8005BA2D9 /* Shoppy */ = {
+			isa = PBXGroup;
+			children = (
+				7B1233E7292664F8005BA2D9 /* AppDelegate.swift */,
+				7B1233E9292664F8005BA2D9 /* SceneDelegate.swift */,
+				7B384E7829290B5600C29BD4 /* What needs to be finished.h */,
+				7B1233ED292664F8005BA2D9 /* Main.storyboard */,
+				7B1233F0292664FA005BA2D9 /* Assets.xcassets */,
+				7B1233F2292664FA005BA2D9 /* LaunchScreen.storyboard */,
+				7B1233F5292664FA005BA2D9 /* Info.plist */,
+				7BF298F22926878700123545 /* AddListViewController.swift */,
+				7BF298EE292666B900123545 /* ListViewController.swift */,
+				7BF298F02926866300123545 /* ListCell.swift */,
+				7BF298EC292666A900123545 /* LoginViewController.swift */,
+				7BBE9BF72926DF9E00700F19 /* ItemsViewController.swift */,
+				7B97E2342927E049004292C5 /* ItemViewCell.swift */,
+			);
+			path = Shoppy;
+			sourceTree = "<group>";
+		};
+		7B1233FD292664FA005BA2D9 /* Shoppytests */ = {
+			isa = PBXGroup;
+			children = (
+				7B1233FE292664FA005BA2D9 /* ShoppyTests.swift */,
+			);
+			path = Shoppytests;
+			sourceTree = "<group>";
+		};
+		EC83F9AF250B1175008806CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2A04CBDC7A23AF18AD582F1 /* Pods-Shoppy-Falcone.debug.xcconfig */,
+				6FB09C69ED9FC99212E7E71B /* Pods-Shoppy-Falcone.release.xcconfig */,
+				8A57C2CB7530005F70659EB4 /* Pods-Shoppy.debug.xcconfig */,
+				B85093130973B17085A62610 /* Pods-Shoppy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B1233E3292664F8005BA2D9 /* Shoppy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B12340E292664FA005BA2D9 /* Build configuration list for PBXNativeTarget "Shoppy" */;
+			buildPhases = (
+				6A9A615FF25A06C2DE4F06FD /* [CP] Check Pods Manifest.lock */,
+				7B1233E0292664F8005BA2D9 /* Sources */,
+				7B1233E1292664F8005BA2D9 /* Frameworks */,
+				7B1233E2292664F8005BA2D9 /* Resources */,
+				E5D4EF471B99D526F51EF2FD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Shoppy;
+			productName = "Shoppy-Falcone";
+			productReference = 7B1233E4292664F8005BA2D9 /* Shoppy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B1233F9292664FA005BA2D9 /* ShoppyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B123411292664FA005BA2D9 /* Build configuration list for PBXNativeTarget "ShoppyTests" */;
+			buildPhases = (
+				7B1233F6292664FA005BA2D9 /* Sources */,
+				7B1233F7292664FA005BA2D9 /* Frameworks */,
+				7B1233F8292664FA005BA2D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B1233FC292664FA005BA2D9 /* PBXTargetDependency */,
+			);
+			name = ShoppyTests;
+			productName = "Shoppy-FalconeTests";
+			productReference = 7B1233FA292664FA005BA2D9 /* ShoppyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7B123403292664FA005BA2D9 /* ShoppyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B123414292664FA005BA2D9 /* Build configuration list for PBXNativeTarget "ShoppyUITests" */;
+			buildPhases = (
+				7B123400292664FA005BA2D9 /* Sources */,
+				7B123401292664FA005BA2D9 /* Frameworks */,
+				7B123402292664FA005BA2D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B123406292664FA005BA2D9 /* PBXTargetDependency */,
+			);
+			name = ShoppyUITests;
+			productName = "Shoppy-FalconeUITests";
+			productReference = 7B123404292664FA005BA2D9 /* ShoppyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B1233DC292664F8005BA2D9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					7B1233E3292664F8005BA2D9 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					7B1233F9292664FA005BA2D9 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7B1233E3292664F8005BA2D9;
+					};
+					7B123403292664FA005BA2D9 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7B1233E3292664F8005BA2D9;
+					};
+				};
+			};
+			buildConfigurationList = 7B1233DF292664F8005BA2D9 /* Build configuration list for PBXProject "Shoppy" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7B1233DB292664F8005BA2D9;
+			productRefGroup = 7B1233E5292664F8005BA2D9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B1233E3292664F8005BA2D9 /* Shoppy */,
+				7B1233F9292664FA005BA2D9 /* ShoppyTests */,
+				7B123403292664FA005BA2D9 /* ShoppyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B1233E2292664F8005BA2D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B1233F4292664FA005BA2D9 /* LaunchScreen.storyboard in Resources */,
+				7B1233F1292664FA005BA2D9 /* Assets.xcassets in Resources */,
+				7B1233EF292664F8005BA2D9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B1233F8292664FA005BA2D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B123402292664FA005BA2D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A9A615FF25A06C2DE4F06FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shoppy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5D4EF471B99D526F51EF2FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shoppy/Pods-Shoppy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Shoppy/Pods-Shoppy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Shoppy/Pods-Shoppy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B1233E0292664F8005BA2D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BF298F32926878700123545 /* AddListViewController.swift in Sources */,
+				7BF298ED292666A900123545 /* LoginViewController.swift in Sources */,
+				7B1233E8292664F8005BA2D9 /* AppDelegate.swift in Sources */,
+				7BF298EF292666B900123545 /* ListViewController.swift in Sources */,
+				7BBE9BF82926DF9E00700F19 /* ItemsViewController.swift in Sources */,
+				7BF298F12926866300123545 /* ListCell.swift in Sources */,
+				7B1233EA292664F8005BA2D9 /* SceneDelegate.swift in Sources */,
+				7B97E2352927E049004292C5 /* ItemViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B1233F6292664FA005BA2D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B1233FF292664FA005BA2D9 /* ShoppyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B123400292664FA005BA2D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B1233FC292664FA005BA2D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B1233E3292664F8005BA2D9 /* Shoppy */;
+			targetProxy = 7B1233FB292664FA005BA2D9 /* PBXContainerItemProxy */;
+		};
+		7B123406292664FA005BA2D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B1233E3292664F8005BA2D9 /* Shoppy */;
+			targetProxy = 7B123405292664FA005BA2D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B1233ED292664F8005BA2D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B1233EE292664F8005BA2D9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7B1233F2292664FA005BA2D9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B1233F3292664FA005BA2D9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B12340C292664FA005BA2D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7B12340D292664FA005BA2D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B12340F292664FA005BA2D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A57C2CB7530005F70659EB4 /* Pods-Shoppy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMZZ47ZJSF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shoppy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shoppy;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fallonrfalcone.Shoppy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7B123410292664FA005BA2D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B85093130973B17085A62610 /* Pods-Shoppy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMZZ47ZJSF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Shoppy/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Shoppy;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fallonrfalcone.Shoppy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7B123412292664FA005BA2D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMZZ47ZJSF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fallonrfalcone.Shoppy-FalconeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoppy.app/Shoppy";
+			};
+			name = Debug;
+		};
+		7B123413292664FA005BA2D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMZZ47ZJSF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fallonrfalcone.Shoppy-FalconeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shoppy.app/Shoppy";
+			};
+			name = Release;
+		};
+		7B123415292664FA005BA2D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMZZ47ZJSF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fallonrfalcone.Shoppy-FalconeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Shoppy-Falcone";
+			};
+			name = Debug;
+		};
+		7B123416292664FA005BA2D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YMZZ47ZJSF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fallonrfalcone.Shoppy-FalconeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Shoppy-Falcone";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B1233DF292664F8005BA2D9 /* Build configuration list for PBXProject "Shoppy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B12340C292664FA005BA2D9 /* Debug */,
+				7B12340D292664FA005BA2D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B12340E292664FA005BA2D9 /* Build configuration list for PBXNativeTarget "Shoppy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B12340F292664FA005BA2D9 /* Debug */,
+				7B123410292664FA005BA2D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B123411292664FA005BA2D9 /* Build configuration list for PBXNativeTarget "ShoppyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B123412292664FA005BA2D9 /* Debug */,
+				7B123413292664FA005BA2D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B123414292664FA005BA2D9 /* Build configuration list for PBXNativeTarget "ShoppyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B123415292664FA005BA2D9 /* Debug */,
+				7B123416292664FA005BA2D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B1233DC292664F8005BA2D9 /* Project object */;
+}
