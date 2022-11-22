@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        sleep(1)
         // Override point for customization after application launch.
         let parseConfig = ParseClientConfiguration {
                     $0.applicationId = "1njGMMuJydK2hBfhzWYDZnnxX0mnQqA5max4lSfc"
@@ -36,6 +38,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+    
+    
+    
+    
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+
+        window?.rootViewController = UIStoryboard(name: "LaunchScreen", bundle: nil).instantiateInitialViewController()
+        window?.makeKeyAndVisible()
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            self.window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        }
+
+        guard let _ = (scene as? UIWindowScene) else { return }
     }
 
 

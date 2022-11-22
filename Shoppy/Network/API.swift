@@ -16,9 +16,9 @@ import Foundation
 import Foundation
 
 struct API {
-    /*
+    
     static func getLists(completion: @escaping ([ListInfo]?) -> Void) {
-        
+        /*
         //Insert API key later
         let apikey = "_"
         
@@ -55,8 +55,9 @@ struct API {
             }
             
         }
+         */
     }
-    */
+    
     
     
     
