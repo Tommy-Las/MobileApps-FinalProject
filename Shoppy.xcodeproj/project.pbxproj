@@ -23,6 +23,7 @@
 		C01F9051292D2662003436FA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9050292D2662003436FA /* API.swift */; };
 		C01F9054292D29EB003436FA /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9053292D29EB003436FA /* List.swift */; };
 		C01F9056292D29F8003436FA /* ListInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9055292D29F8003436FA /* ListInfo.swift */; };
+		C01F9059292D4E88003436FA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9058292D4E88003436FA /* AddViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		C01F9050292D2662003436FA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		C01F9053292D29EB003436FA /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		C01F9055292D29F8003436FA /* ListInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInfo.swift; sourceTree = "<group>"; };
+		C01F9058292D4E88003436FA /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		D2A04CBDC7A23AF18AD582F1 /* Pods-Shoppy-Falcone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppy-Falcone.debug.xcconfig"; path = "Target Support Files/Pods-Shoppy-Falcone/Pods-Shoppy-Falcone.debug.xcconfig"; sourceTree = "<group>"; };
 		D93A30CD448FB52C952B1D81 /* Pods_Shoppy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoppy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		7B1233E6292664F8005BA2D9 /* Shoppy */ = {
 			isa = PBXGroup;
 			children = (
+				C01F9057292D4E6C003436FA /* Misc */,
 				C01F9052292D2720003436FA /* Containers */,
 				C01F904E292D2605003436FA /* Network */,
 				C01F904F292D2624003436FA /* Cells */,
@@ -154,6 +157,7 @@
 		C01F904D292D25FB003436FA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C01F9058292D4E88003436FA /* AddViewController.swift */,
 				7BF298EC292666A900123545 /* LoginViewController.swift */,
 				7BBE9BF72926DF9E00700F19 /* ItemsViewController.swift */,
 				7BF298F22926878700123545 /* AddListViewController.swift */,
@@ -186,6 +190,13 @@
 				C01F9055292D29F8003436FA /* ListInfo.swift */,
 			);
 			path = Containers;
+			sourceTree = "<group>";
+		};
+		C01F9057292D4E6C003436FA /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 		EC83F9AF250B1175008806CC /* Pods */ = {
@@ -376,6 +387,7 @@
 			files = (
 				C01F9056292D29F8003436FA /* ListInfo.swift in Sources */,
 				7BF298F32926878700123545 /* AddListViewController.swift in Sources */,
+				C01F9059292D4E88003436FA /* AddViewController.swift in Sources */,
 				7BF298ED292666A900123545 /* LoginViewController.swift in Sources */,
 				7B1233E8292664F8005BA2D9 /* AppDelegate.swift in Sources */,
 				C01F9054292D29EB003436FA /* List.swift in Sources */,
