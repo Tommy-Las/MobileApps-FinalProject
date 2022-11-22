@@ -20,6 +20,9 @@
 		7BF298F12926866300123545 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF298F02926866300123545 /* ListCell.swift */; };
 		7BF298F32926878700123545 /* AddListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF298F22926878700123545 /* AddListViewController.swift */; };
 		BDFD02CA7702A76926584F50 /* Pods_Shoppy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93A30CD448FB52C952B1D81 /* Pods_Shoppy.framework */; };
+		C01F9051292D2662003436FA /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9050292D2662003436FA /* API.swift */; };
+		C01F9054292D29EB003436FA /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9053292D29EB003436FA /* List.swift */; };
+		C01F9056292D29F8003436FA /* ListInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9055292D29F8003436FA /* ListInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		7BF298F22926878700123545 /* AddListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewController.swift; sourceTree = "<group>"; };
 		8A57C2CB7530005F70659EB4 /* Pods-Shoppy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppy.debug.xcconfig"; path = "Target Support Files/Pods-Shoppy/Pods-Shoppy.debug.xcconfig"; sourceTree = "<group>"; };
 		B85093130973B17085A62610 /* Pods-Shoppy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppy.release.xcconfig"; path = "Target Support Files/Pods-Shoppy/Pods-Shoppy.release.xcconfig"; sourceTree = "<group>"; };
+		C01F9050292D2662003436FA /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		C01F9053292D29EB003436FA /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		C01F9055292D29F8003436FA /* ListInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInfo.swift; sourceTree = "<group>"; };
 		D2A04CBDC7A23AF18AD582F1 /* Pods-Shoppy-Falcone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppy-Falcone.debug.xcconfig"; path = "Target Support Files/Pods-Shoppy-Falcone/Pods-Shoppy-Falcone.debug.xcconfig"; sourceTree = "<group>"; };
 		D93A30CD448FB52C952B1D81 /* Pods_Shoppy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoppy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -122,6 +128,10 @@
 		7B1233E6292664F8005BA2D9 /* Shoppy */ = {
 			isa = PBXGroup;
 			children = (
+				C01F9052292D2720003436FA /* Containers */,
+				C01F904E292D2605003436FA /* Network */,
+				C01F904F292D2624003436FA /* Cells */,
+				C01F904D292D25FB003436FA /* Controllers */,
 				7B1233E7292664F8005BA2D9 /* AppDelegate.swift */,
 				7B1233E9292664F8005BA2D9 /* SceneDelegate.swift */,
 				7B384E7829290B5600C29BD4 /* What needs to be finished.h */,
@@ -129,12 +139,6 @@
 				7B1233F0292664FA005BA2D9 /* Assets.xcassets */,
 				7B1233F2292664FA005BA2D9 /* LaunchScreen.storyboard */,
 				7B1233F5292664FA005BA2D9 /* Info.plist */,
-				7BF298F22926878700123545 /* AddListViewController.swift */,
-				7BF298EE292666B900123545 /* ListViewController.swift */,
-				7BF298F02926866300123545 /* ListCell.swift */,
-				7BF298EC292666A900123545 /* LoginViewController.swift */,
-				7BBE9BF72926DF9E00700F19 /* ItemsViewController.swift */,
-				7B97E2342927E049004292C5 /* ItemViewCell.swift */,
 			);
 			path = Shoppy;
 			sourceTree = "<group>";
@@ -145,6 +149,43 @@
 				7B1233FE292664FA005BA2D9 /* ShoppyTests.swift */,
 			);
 			path = Shoppytests;
+			sourceTree = "<group>";
+		};
+		C01F904D292D25FB003436FA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7BF298EC292666A900123545 /* LoginViewController.swift */,
+				7BBE9BF72926DF9E00700F19 /* ItemsViewController.swift */,
+				7BF298F22926878700123545 /* AddListViewController.swift */,
+				7BF298EE292666B900123545 /* ListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C01F904E292D2605003436FA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C01F9050292D2662003436FA /* API.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C01F904F292D2624003436FA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7BF298F02926866300123545 /* ListCell.swift */,
+				7B97E2342927E049004292C5 /* ItemViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C01F9052292D2720003436FA /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				C01F9053292D29EB003436FA /* List.swift */,
+				C01F9055292D29F8003436FA /* ListInfo.swift */,
+			);
+			path = Containers;
 			sourceTree = "<group>";
 		};
 		EC83F9AF250B1175008806CC /* Pods */ = {
@@ -333,13 +374,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01F9056292D29F8003436FA /* ListInfo.swift in Sources */,
 				7BF298F32926878700123545 /* AddListViewController.swift in Sources */,
 				7BF298ED292666A900123545 /* LoginViewController.swift in Sources */,
 				7B1233E8292664F8005BA2D9 /* AppDelegate.swift in Sources */,
+				C01F9054292D29EB003436FA /* List.swift in Sources */,
 				7BF298EF292666B900123545 /* ListViewController.swift in Sources */,
 				7BBE9BF82926DF9E00700F19 /* ItemsViewController.swift in Sources */,
 				7BF298F12926866300123545 /* ListCell.swift in Sources */,
 				7B1233EA292664F8005BA2D9 /* SceneDelegate.swift in Sources */,
+				C01F9051292D2662003436FA /* API.swift in Sources */,
 				7B97E2352927E049004292C5 /* ItemViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

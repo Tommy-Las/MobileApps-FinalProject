@@ -8,5 +8,8 @@ target 'Shoppy' do
   # Pods for Shoppy
 
 pod 'Parse'
+pod 'AlamofireImage'
+pod 'MessageInputBar'
+
 
 end
