@@ -241,7 +241,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="182"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="im-tired-of-programming" translatesAutoresizingMaskIntoConstraints="NO" id="kJg-Zm-U8Q">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stockitem" translatesAutoresizingMaskIntoConstraints="NO" id="kJg-Zm-U8Q">
                                                     <rect key="frame" x="20" y="27" width="125" height="127"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="127" id="6FD-zT-3cW"/>
@@ -440,10 +440,10 @@
     </scenes>
     <resources>
         <image name="Shoppy Logo 180 x 180" width="180" height="180"/>
-        <image name="im-tired-of-programming" width="680" height="826"/>
         <image name="listpic" width="6000" height="3376"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="stockitem" width="4353" height="3434"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
