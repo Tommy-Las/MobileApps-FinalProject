@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ST-fh-uHB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ST-fh-uHB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -144,7 +144,7 @@
                     <navigationItem key="navigationItem" title="My Lists" id="bkm-BA-ieJ">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="d46-4r-5Aj">
                             <connections>
-                                <action selector="onLogout:" destination="jEd-j7-dtY" id="agi-mU-Ir1"/>
+                                <action selector="logoutAccount:" destination="jEd-j7-dtY" id="wk5-Py-EJK"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mcG-fz-e1s">
@@ -332,11 +332,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="v6B-s1-hN6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1EU-rJ-wev">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="O0n-hI-8xT">
                             <connections>
-                                <segue destination="syH-Cj-rrv" kind="presentation" id="TT0-HF-GUi"/>
+                                <action selector="logoutAccount:" destination="pXV-Dk-WaR" id="eo3-mv-o8P"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1EU-rJ-wev"/>
                     </navigationItem>
                     <connections>
                         <outlet property="itemTableView" destination="R3E-aF-p7H" id="C1h-l6-WXO"/>
@@ -351,7 +352,7 @@
             <objects>
                 <viewController id="syH-Cj-rrv" customClass="AddViewController" customModule="Shoppy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svb-o9-HIt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add An Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehy-K3-CEK">
@@ -399,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4c-dL-HNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5053.6231884057979" y="580.58035714285711"/>
+            <point key="canvasLocation" x="6735" y="582"/>
         </scene>
         <!--Searched Product View Controller-->
         <scene sceneID="CSL-m6-djZ">
@@ -491,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gi2-kG-kQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5053.6231884057979" y="1247.5446428571429"/>
+            <point key="canvasLocation" x="5207" y="582"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gUg-hl-426">
