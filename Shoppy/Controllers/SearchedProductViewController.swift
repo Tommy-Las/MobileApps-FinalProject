@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -46,7 +47,6 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
                         
                         tableView.reloadData()
                         
-                        
                         print(productArray[0])
                         
                         //successCallBack(dataDictionary)
@@ -63,9 +63,12 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchedProductCell", for: indexPath) as! SearchedProductCell
         cell.productName.text = productArray[indexPath.row]["title"] as! String
+        let imageURL = URL(string: productArray[indexPath.row]["image"] as! String) as! URL
+        cell.productImage.af.setImage(withURL: imageURL)
         return cell
     }
 
+    
     /*
     // MARK: - Navigation
 

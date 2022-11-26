@@ -11,6 +11,7 @@ class SearchedProductCell: UITableViewCell {
 
     @IBOutlet weak var productQuantity: UITextField!
     @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
