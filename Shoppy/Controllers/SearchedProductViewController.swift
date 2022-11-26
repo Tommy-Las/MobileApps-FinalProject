@@ -12,8 +12,11 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var productArray = [Dictionary<String, Any>]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         searchBar.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
@@ -31,13 +34,21 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
                 let url = URL(string: "https://api.spoonacular.com/food/products/search?query=\(productSearched)&apiKey=\(apiKey)")!
                 let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
                 let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
-                let task: URLSessionDataTask = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: Error?) in
+        let task: URLSessionDataTask = session.dataTask(with: request) { [self] (data: Data?, response: URLResponse?, error: Error?) in
                     if let error = error {
                         //errorCallBack?(error)
                         print(error)
                     } else if let data = data,
                         let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
-                        print(dataDictionary)
+                        
+                        
+                        productArray = dataDictionary["products"] as! [Dictionary<String, Any>]
+                        
+                        tableView.reloadData()
+                        
+                        
+                        print(productArray[0])
+                        
                         //successCallBack(dataDictionary)
                     }
                 }
@@ -45,18 +56,15 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return productArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchedProductCell", for: indexPath) as! SearchedProductCell
-        cell.productName.text = "testing"
+        cell.productName.text = productArray[indexPath.row]["title"] as! String
         return cell
     }
-    
-    
-    
 
     /*
     // MARK: - Navigation
