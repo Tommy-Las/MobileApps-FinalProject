@@ -18,10 +18,11 @@ import Foundation
 struct API {
     
     static func getLists(completion: @escaping ([ListInfo]?) -> Void) {
-        /*
-        //Insert API key later
-        let apikey = "_"
         
+        //Insert API key later
+        let apikey = "5d4806f0164347bd89fb4b1509c6e3e3"
+        
+        /*
         let url = URL(string: "_")!
         
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoreLocalCacheData, timeoutInterval: 10)

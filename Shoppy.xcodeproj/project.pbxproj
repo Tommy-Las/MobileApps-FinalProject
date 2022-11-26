@@ -24,6 +24,8 @@
 		C01F9054292D29EB003436FA /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9053292D29EB003436FA /* List.swift */; };
 		C01F9056292D29F8003436FA /* ListInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9055292D29F8003436FA /* ListInfo.swift */; };
 		C01F9059292D4E88003436FA /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01F9058292D4E88003436FA /* AddViewController.swift */; };
+		E31CE1BE292D70D9001912CA /* SearchedProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31CE1BD292D70D9001912CA /* SearchedProductViewController.swift */; };
+		E31CE1C4292D76C6001912CA /* SearchedProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31CE1C3292D76C6001912CA /* SearchedProductCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		C01F9058292D4E88003436FA /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		D2A04CBDC7A23AF18AD582F1 /* Pods-Shoppy-Falcone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shoppy-Falcone.debug.xcconfig"; path = "Target Support Files/Pods-Shoppy-Falcone/Pods-Shoppy-Falcone.debug.xcconfig"; sourceTree = "<group>"; };
 		D93A30CD448FB52C952B1D81 /* Pods_Shoppy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shoppy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E31CE1BD292D70D9001912CA /* SearchedProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedProductViewController.swift; sourceTree = "<group>"; };
+		E31CE1C3292D76C6001912CA /* SearchedProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedProductCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 				7BBE9BF72926DF9E00700F19 /* ItemsViewController.swift */,
 				7BF298F22926878700123545 /* AddListViewController.swift */,
 				7BF298EE292666B900123545 /* ListViewController.swift */,
+				E31CE1BD292D70D9001912CA /* SearchedProductViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 			children = (
 				7BF298F02926866300123545 /* ListCell.swift */,
 				7B97E2342927E049004292C5 /* ItemViewCell.swift */,
+				E31CE1C3292D76C6001912CA /* SearchedProductCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -387,6 +393,7 @@
 			files = (
 				C01F9056292D29F8003436FA /* ListInfo.swift in Sources */,
 				7BF298F32926878700123545 /* AddListViewController.swift in Sources */,
+				E31CE1C4292D76C6001912CA /* SearchedProductCell.swift in Sources */,
 				C01F9059292D4E88003436FA /* AddViewController.swift in Sources */,
 				7BF298ED292666A900123545 /* LoginViewController.swift in Sources */,
 				7B1233E8292664F8005BA2D9 /* AppDelegate.swift in Sources */,
@@ -394,6 +401,7 @@
 				7BF298EF292666B900123545 /* ListViewController.swift in Sources */,
 				7BBE9BF82926DF9E00700F19 /* ItemsViewController.swift in Sources */,
 				7BF298F12926866300123545 /* ListCell.swift in Sources */,
+				E31CE1BE292D70D9001912CA /* SearchedProductViewController.swift in Sources */,
 				7B1233EA292664F8005BA2D9 /* SceneDelegate.swift in Sources */,
 				C01F9051292D2662003436FA /* API.swift in Sources */,
 				7B97E2352927E049004292C5 /* ItemViewCell.swift in Sources */,
