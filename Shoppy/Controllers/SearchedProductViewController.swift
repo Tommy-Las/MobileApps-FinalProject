@@ -21,16 +21,11 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
         searchBar.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
-        
-        tableView.register(UITableView.self, forCellReuseIdentifier: "cell")
-        
-        
 
         // Do any additional setup after loading the view.
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(searchBar.text)
         
         let productSearched = searchBar.text!
         
@@ -69,24 +64,8 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
         let imageURL = URL(string: productArray[indexPath.row]["image"] as! String) as! URL
         cell.productImage.af.setImage(withURL: imageURL)
         
+        cell.setData(with: productArray[indexPath.row])
+    
         return cell
     }
-    
-    
-    func addProductToList(sender: UIButton) {
-        var buttonNumber = sender.tag
-        
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
