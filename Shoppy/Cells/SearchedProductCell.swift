@@ -12,6 +12,9 @@ class SearchedProductCell: UITableViewCell {
     @IBOutlet weak var productQuantity: UITextField!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var addProductButton: UIButton!
+    
+    static let identifier = "SearchedProductCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,4 +27,7 @@ class SearchedProductCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func addProductToList(_ sender: UIButton){
+        
+    }
 }
