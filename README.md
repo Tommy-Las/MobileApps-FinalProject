@@ -294,7 +294,7 @@ In our github project.
 
 
 
-
+Sprint 10:
 <img src='http://g.recordit.co/C7LYQccNG2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <img src='http://g.recordit.co/DZzgW54EtS.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
@@ -304,3 +304,14 @@ In our github project.
 App Logo:
 <img src='https://i.imgur.com/0dxmwuS.png' title='App Logo' width='' alt='App Logo' />
 
+
+
+
+
+Sprint 11:
+
+<img src='http://g.recordit.co/6UHWyQ7vND.gif' width='' alt='Video Walkthrough' />
+http://g.recordit.co/6UHWyQ7vND.gif
+
+<img src='http://g.recordit.co/8jKR94fAf0.gif' width='' alt='Video Walkthrough' />
+http://g.recordit.co/8jKR94fAf0.gif

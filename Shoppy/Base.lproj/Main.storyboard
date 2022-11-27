@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ST-fh-uHB">
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9ST-fh-uHB">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -143,7 +146,7 @@
                     <navigationItem key="navigationItem" title="My Lists" id="bkm-BA-ieJ">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="d46-4r-5Aj">
                             <connections>
-                                <action selector="onLogout:" destination="jEd-j7-dtY" id="agi-mU-Ir1"/>
+                                <action selector="logoutAccount:" destination="jEd-j7-dtY" id="wk5-Py-EJK"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="mcG-fz-e1s">
@@ -331,11 +334,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="v6B-s1-hN6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1EU-rJ-wev">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="O0n-hI-8xT">
                             <connections>
+
                                 <segue destination="9ST-fh-uHB" kind="presentation" id="rHy-0C-v7O"/>
+
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1EU-rJ-wev"/>
                     </navigationItem>
                     <connections>
                         <outlet property="itemTableView" destination="R3E-aF-p7H" id="C1h-l6-WXO"/>
@@ -398,7 +404,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4c-dL-HNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5006" y="-94"/>
+
+            <point key="canvasLocation" x="6735" y="582"/>
+
         </scene>
         <!--Searched Product View Controller-->
         <scene sceneID="CSL-m6-djZ">
@@ -495,7 +503,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gi2-kG-kQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5981" y="581"/>
+
+            <point key="canvasLocation" x="5207" y="582"/>
+
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gUg-hl-426">
