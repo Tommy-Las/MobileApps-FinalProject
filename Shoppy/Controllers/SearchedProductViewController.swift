@@ -31,23 +31,22 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
     
     var productArray = [Dictionary<String, Any>]()
     
-    override func viewDidLoad() { //******************************************HERE
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         searchBar.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
-        
+
         startDismissing = 0 //This is for good luck
         
         self.dismiss(animated: true, completion: nil)
-        
+       
 
         // Do any additional setup after loading the view.
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(searchBar.text)
         
         let productSearched = searchBar.text!
         
@@ -85,25 +84,9 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
         cell.productName.text = productArray[indexPath.row]["title"] as! String
         let imageURL = URL(string: productArray[indexPath.row]["image"] as! String) as! URL
         cell.productImage.af.setImage(withURL: imageURL)
-        
-        //how do we get a button here???
-        //we edit the cell swift file to make an action outlet
-        
-        
-        
+
+        cell.setData(with: productArray[indexPath.row])
         
         return cell
     }
-
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
