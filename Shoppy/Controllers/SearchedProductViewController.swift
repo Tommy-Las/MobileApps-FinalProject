@@ -8,10 +8,26 @@
 import UIKit
 import AlamofireImage
 
+import Parse
+
+var startDismissing = 0
+
 class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    @IBAction func plusClicked(_ sender: Any) {
+        print("plus pressed!")
+        if (startDismissing == 1) {
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+       
+    }
+    
+
     
     var productArray = [Dictionary<String, Any>]()
     
@@ -21,6 +37,11 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
         searchBar.delegate = self
         tableView.dataSource = self
         tableView.delegate = self
+
+        startDismissing = 0 //This is for good luck
+        
+        self.dismiss(animated: true, completion: nil)
+       
 
         // Do any additional setup after loading the view.
     }
@@ -63,9 +84,9 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
         cell.productName.text = productArray[indexPath.row]["title"] as! String
         let imageURL = URL(string: productArray[indexPath.row]["image"] as! String) as! URL
         cell.productImage.af.setImage(withURL: imageURL)
-        
+
         cell.setData(with: productArray[indexPath.row])
-    
+        
         return cell
     }
 }
