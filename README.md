@@ -315,3 +315,8 @@ http://g.recordit.co/6UHWyQ7vND.gif
 
 <img src='http://g.recordit.co/8jKR94fAf0.gif' width='' alt='Video Walkthrough' />
 http://g.recordit.co/8jKR94fAf0.gif
+
+Sprint 12:
+
+<img src='http://g.recordit.co/6UHWyQ7vND.gif' width='' alt='Video Walkthrough' />
+https://submissions.us-east-1.linodeobjects.com/ios_university/rFieX10j.gif
