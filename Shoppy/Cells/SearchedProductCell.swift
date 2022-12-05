@@ -16,7 +16,9 @@ class SearchedProductCell: UITableViewCell {
     @IBOutlet weak var productImage: UIImageView!
 
     //dec 4
-    var selectedList: PFObject! //<-- This needs to be near the top, with the outlets
+    //dec 5: fix the declaration
+    var selectedList = PFObject(className: "Lists") //<-- This needs to be near the top, with the outlets
+    //dec 5 end
     //dec 4 end
     
     private var data = Dictionary<String, Any>()
@@ -25,7 +27,7 @@ class SearchedProductCell: UITableViewCell {
         
         //check parstagram!!!
         
-        //list["items"]  <- list of a specific data type (as opposed to a dictionary)
+        //list["Items"]  <- list of a specific data type (as opposed to a dictionary)
         
         //access the specific tableview's element (stuff returned in api call)
         //then
@@ -59,7 +61,7 @@ class SearchedProductCell: UITableViewCell {
             }
         } */
         
-        //list["items"].append(listitem)
+        //list["Items"].append(listitem)
         
     }
     
@@ -83,7 +85,9 @@ class SearchedProductCell: UITableViewCell {
     @IBAction func addProductToList(_ sender: Any) {
 
         //Data to be added to the list
-        var id = data["id"] as! Int
+        //var id = data["id"] as! Int
+        var id = String(data["id"] as! Int)
+        
         var name = data["title"] as! String
         var imageUrl = data["image"] as! String
         var quantity = productQuantity.text!
@@ -91,7 +95,7 @@ class SearchedProductCell: UITableViewCell {
         //DEC 4 transplant below
               
         let item = PFObject(className: "Items") //Create a single item row in the Items table
-        item["id"] = id
+        item["itemId"] = id //Dec 5: this PFObject attribute field can not be named "id" as its a reserved word in Parse: https://github.com/parse-community/parse-server/issues/6309
         item["name"] = name
         item["imageUrl"] = imageUrl
         item["quantity"] = quantity
@@ -104,7 +108,8 @@ class SearchedProductCell: UITableViewCell {
         let query = PFQuery(className:"Lists") //query inside Lists table
         query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
             if error == nil {
-                self.selectedList = selectedList // Set the found PFObject of type Lists to a variable accessible in this view controller.
+                self.selectedList = selectedList! // Set the found PFObject of type Lists to a variable accessible in this view controller.
+                print("SearchedProductCell successfully found the list.")
                 // Success!
             } else {
                 // Fail!
@@ -117,9 +122,10 @@ class SearchedProductCell: UITableViewCell {
         //Save the item and list
         selectedList.saveInBackground { (success, error) in //Observation: this should save the item in background as well???
             if success {
-                print("Comment saved")
+                print("Item saved to list successfully!")
+                //print("\(selectedList["Items"][0]["name]"])")
             } else {
-                print("Error saving comment")
+                print("Error saving item to list!")
             }
         }
         

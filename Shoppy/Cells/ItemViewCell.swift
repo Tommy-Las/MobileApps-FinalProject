@@ -10,8 +10,13 @@ import Parse
 
 class ItemViewCell: UITableViewCell {
     
+    
+    /*
     weak var viewController: UIViewController? = nil
     var value = 1
+     */
+    
+    
     
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var itemName: UILabel!
@@ -23,13 +28,16 @@ class ItemViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
+    
+    
+    /*
     @IBAction func onDecrement(_ sender: Any) {
         guard let viewController = viewController else {
             print("No view controller found. Exiting.")
@@ -61,13 +69,15 @@ class ItemViewCell: UITableViewCell {
             quantityValue.text = "\(value)"
         }
     }
+    */
     
+    /*
     @IBAction func onIncrement(_ sender: Any) {
         if value >= 1 {
             value = value + 1
             quantityValue.text = "\(value)"
         }
-    }
+    }*/
 }
     
     
