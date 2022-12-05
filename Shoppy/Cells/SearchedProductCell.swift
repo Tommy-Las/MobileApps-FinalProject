@@ -98,9 +98,8 @@ class SearchedProductCell: UITableViewCell {
         //item["brandName"] = ....?
         //Dec 4: set up item["brandName"]
         
-        
 
-        //Search for the shopping list that is considered the current one.
+        //Search for the shopping list that is considered the current one, then assign it to selectedList.
         
         let query = PFQuery(className:"Lists") //query inside Lists table
         query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
@@ -112,8 +111,10 @@ class SearchedProductCell: UITableViewCell {
             }
         }
         
+        //Add the item PFObject as an element to an array, which is a (new) attribute of lists.
         selectedList.add(item, forKey: "items") //Just like in Parstagram, we are able to add new attributes to other tables' existing rows.
         
+        //Save the item and list
         selectedList.saveInBackground { (success, error) in //Observation: this should save the item in background as well???
             if success {
                 print("Comment saved")

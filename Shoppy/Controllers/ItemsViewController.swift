@@ -54,6 +54,8 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         // December 4 code, Oliver's transplant
         
+        
+        //We need to do a query for the list that matches the globalObjectId so that we can access it to retrieve the items (The list is assigned to selectedList)
         let query = PFQuery(className:"Lists") //query inside Lists table
         query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
             if error == nil {
@@ -67,15 +69,15 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemViewCell") as! ItemViewCell //item cell
         
-        
         let items = (selectedList["items"] as? [PFObject]) ?? [] //Array of PFObjects (rows of Items table) that have been added to the selectedList before.
         
-        let item = items[indexPath.row] //An individual element of that array
         
-        cell.itemName = item["name"] as? String //Access an attribute of that array element
-        cell.brandName = item["brandName"] as? String //Access an attribute of that array element //Dec 4: This has to be set up later???
-        cell.quantityValue = item["quantity"] as? String //Access an attribute of that array element
-        cell.imageUrl = item["imageUrl"] as? String
+        let item = items[indexPath.row] //An individual element of that array. indexPath.row is the Nth table cell, and we need the Nth item of the selectedList.
+        
+        cell.itemName.text = item["name"] as! String //Access an attribute of that array element
+        cell.brandName.text = item["brandName"] as! String //Access an attribute of that array element //Dec 4: This has to be set up later???
+        cell.quantityValue.text = item["quantity"] as! String //Access an attribute of that array element
+        cell.imageUrl = item["imageUrl"] as! String
         //Must add a cell variable for the image later.
 
         

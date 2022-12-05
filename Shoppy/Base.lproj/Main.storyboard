@@ -116,6 +116,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbs-mh-YG3">
+                                                    <rect key="frame" x="319" y="8" width="83" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="View List"/>
+                                                    <connections>
+                                                        <action selector="ViewList:" destination="Izy-l9-YAL" eventType="touchUpInside" id="Pvz-Fd-H5x"/>
+                                                        <action selector="onViewList:" destination="jEd-j7-dtY" eventType="touchUpInside" id="OXA-ol-64C"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="r1o-Le-BLQ" firstAttribute="leading" secondItem="5O6-Hl-ZfS" secondAttribute="leadingMargin" id="5Ky-9U-Eji"/>
