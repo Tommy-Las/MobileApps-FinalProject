@@ -15,6 +15,10 @@ class SearchedProductCell: UITableViewCell {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productImage: UIImageView!
 
+    //dec 4
+    var selectedList: PFObject! //<-- This needs to be near the top, with the outlets
+    //dec 4 end
+    
     private var data = Dictionary<String, Any>()
     
     @IBAction func selectCandidateItem(_ sender: Any) {
@@ -39,7 +43,7 @@ class SearchedProductCell: UITableViewCell {
                     if success {
                         
                         startDismissing = 1
-                        self.dismiss(animated: true, completion: nil)
+                        
                         print("saved!")
                     } else {
                         print("error!")
@@ -83,6 +87,45 @@ class SearchedProductCell: UITableViewCell {
         var name = data["title"] as! String
         var imageUrl = data["image"] as! String
         var quantity = productQuantity.text!
+        
+        //DEC 4 transplant below
+              
+        let item = PFObject(className: "Items") //Create a single item row in the Items table
+        item["id"] = id
+        item["name"] = name
+        item["imageUrl"] = imageUrl
+        item["quantity"] = quantity
+        //item["brandName"] = ....?
+        //Dec 4: set up item["brandName"]
+        
+        
+
+        //Search for the shopping list that is considered the current one.
+        
+        let query = PFQuery(className:"Lists") //query inside Lists table
+        query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
+            if error == nil {
+                self.selectedList = selectedList // Set the found PFObject of type Lists to a variable accessible in this view controller.
+                // Success!
+            } else {
+                // Fail!
+            }
+        }
+        
+        selectedList.add(item, forKey: "items") //Just like in Parstagram, we are able to add new attributes to other tables' existing rows.
+        
+        selectedList.saveInBackground { (success, error) in //Observation: this should save the item in background as well???
+            if success {
+                print("Comment saved")
+            } else {
+                print("Error saving comment")
+            }
+        }
+        
+        
+        
+        //DEC 4 transplant end
+        
                 
         //TODO: Add product to the current list in database here
     }

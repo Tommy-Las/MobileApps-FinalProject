@@ -10,6 +10,12 @@ import Parse
 
 class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    
+    // December 4 code, Oliver's transplant
+    var selectedList: PFObject! //<-- This needs to be near the top, with the outlets
+    // December 4 code end
+    
+    
     @IBOutlet weak var itemTableView: UITableView!
     
     var name = ""
@@ -45,9 +51,42 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemViewCell") as! ItemViewCell
-        cell.viewController = self
+        
+        // December 4 code, Oliver's transplant
+        
+        let query = PFQuery(className:"Lists") //query inside Lists table
+        query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
+            if error == nil {
+                self.selectedList = selectedList // Set the found PFObject of type Lists to a variable accessible in this view controller.
+                // Success!
+            } else {
+                // Fail!
+            }
+        }
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemViewCell") as! ItemViewCell //item cell
+        
+        
+        let items = (selectedList["items"] as? [PFObject]) ?? [] //Array of PFObjects (rows of Items table) that have been added to the selectedList before.
+        
+        let item = items[indexPath.row] //An individual element of that array
+        
+        cell.itemName = item["name"] as? String //Access an attribute of that array element
+        cell.brandName = item["brandName"] as? String //Access an attribute of that array element //Dec 4: This has to be set up later???
+        cell.quantityValue = item["quantity"] as? String //Access an attribute of that array element
+        cell.imageUrl = item["imageUrl"] as? String
+        //Must add a cell variable for the image later.
+
+        
         return cell
+        //December 4 code end
+        
+        //Old code below (pre December 4)
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "ItemViewCell") as! ItemViewCell
+        //cell.viewController = self
+        //return cell
+        //Old code above (pre December 4)
     }
     
     

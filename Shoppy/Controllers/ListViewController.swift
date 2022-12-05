@@ -8,6 +8,13 @@
 import UIKit
 import Parse
 
+
+// December 4 code, Oliver's transplant
+
+//Global variable that we need
+var globalObjectId = ""
+// December 4 code end
+
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
