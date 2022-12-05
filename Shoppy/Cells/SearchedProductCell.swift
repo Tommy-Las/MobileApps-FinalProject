@@ -106,6 +106,7 @@ class SearchedProductCell: UITableViewCell {
         //Search for the shopping list that is considered the current one, then assign it to selectedList.
         
         let query = PFQuery(className:"Lists") //query inside Lists table
+        query.includeKeys(["name", "items"])
         query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
             if error == nil {
                 self.selectedList = selectedList! // Set the found PFObject of type Lists to a variable accessible in this view controller.

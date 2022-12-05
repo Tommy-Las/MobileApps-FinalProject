@@ -30,6 +30,8 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Dec 5 beginning
         //We need to do a query for the list that matches the globalObjectId so that we can access it to retrieve the items (The list is assigned to selectedList)
         let query = PFQuery(className:"Lists") //query inside Lists table
+        
+        query.includeKeys(["name", "items"])
         query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
             if error == nil {
                 self.selectedList = selectedList! // Set the found PFObject of type Lists to a variable accessible in this view controller.
@@ -65,6 +67,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //                 self.foodSearch = dataDictionary["results"] as! [[String: Any]]
              }
         }
+        self.itemTableView.reloadData()
         task.resume()
     }
     
@@ -74,6 +77,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Dec 5 beginning
         //We need to do a query for the list that matches the globalObjectId so that we can access it to retrieve the items (The list is assigned to selectedList)
         let query = PFQuery(className:"Lists") //query inside Lists table
+        query.includeKeys(["name", "items"])
         query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
             if error == nil {
                 self.selectedList = selectedList! // Set the found PFObject of type Lists to a variable accessible in this view controller.
@@ -96,7 +100,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return items.count
-        //return 1
+        //return 1 //debugging purposes
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
