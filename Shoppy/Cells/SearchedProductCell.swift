@@ -17,7 +17,7 @@ class SearchedProductCell: UITableViewCell {
 
     //dec 4
     //dec 5: fix the declaration
-    var selectedList = PFObject(className: "Lists") //<-- This needs to be near the top, with the outlets
+    var selectedList: PFObject! //<-- This needs to be near the top, with the outlets
     //dec 5 end
     //dec 4 end
     
@@ -102,6 +102,7 @@ class SearchedProductCell: UITableViewCell {
         //item["brandName"] = ....?
         //Dec 4: set up item["brandName"]
         
+        print("item name is \(item["name"]! )")
 
         //Search for the shopping list that is considered the current one, then assign it to selectedList.
         
@@ -111,24 +112,29 @@ class SearchedProductCell: UITableViewCell {
             if error == nil {
                 self.selectedList = selectedList! // Set the found PFObject of type Lists to a variable accessible in this view controller.
                 print("SearchedProductCell successfully found the list.")
+                
+                //Add the item PFObject as an element to an array, which is a (new) attribute of lists.
+                self.selectedList.add(item, forKey: "items") //Just like in Parstagram, we are able to add new attributes to other tables' existing rows.
+                
+                //Save the item and list
+                self.selectedList.saveInBackground { (success, error) in //Observation: this should save the item in background as well???
+                    if success {
+                        print("Item saved to list successfully!")
+                        //print("\(selectedList["Items"][0]["name]"])")
+                    } else {
+                        print("Error saving item to list!")
+                    }
+                }
+                
+                
+                
                 // Success!
             } else {
                 // Fail!
             }
         }
         
-        //Add the item PFObject as an element to an array, which is a (new) attribute of lists.
-        selectedList.add(item, forKey: "items") //Just like in Parstagram, we are able to add new attributes to other tables' existing rows.
         
-        //Save the item and list
-        selectedList.saveInBackground { (success, error) in //Observation: this should save the item in background as well???
-            if success {
-                print("Item saved to list successfully!")
-                //print("\(selectedList["Items"][0]["name]"])")
-            } else {
-                print("Error saving item to list!")
-            }
-        }
         
         
         
