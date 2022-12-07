@@ -22,50 +22,7 @@ class SearchedProductCell: UITableViewCell {
     //dec 4 end
     
     private var data = Dictionary<String, Any>()
-    
-    @IBAction func selectCandidateItem(_ sender: Any) {
         
-        //check parstagram!!!
-        
-        //list["Items"]  <- list of a specific data type (as opposed to a dictionary)
-        
-        //access the specific tableview's element (stuff returned in api call)
-        //then
-        
-        //assign the values to values in a unique listItem attributes
-        
-        
-        
-        
-        let listitem = PFObject(className: "ListItem")
-        
-        listitem["name"] = productName.text      // old: textField.text
-        //Alex's new code below
-        listitem.saveInBackground { (success, error) in
-                    if success {
-                        
-                        startDismissing = 1
-                        
-                        print("saved!")
-                    } else {
-                        print("error!")
-                    }
-                }
-        /*
-        listitem.saveInBackground { (success, error) in
-            if success{
-               // self.dismiss(animated: true, completion: nil)
-                print("saved!")
-            } else {
-                print("error!")
-            }
-        } */
-        
-        //list["Items"].append(listitem)
-        
-    }
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -125,9 +82,7 @@ class SearchedProductCell: UITableViewCell {
                         print("Error saving item to list!")
                     }
                 }
-                
-                
-                
+     
                 // Success!
             } else {
                 // Fail!

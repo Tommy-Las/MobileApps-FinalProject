@@ -12,7 +12,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     // December 4 code, Oliver's transplant
-    var selectedList: PFObject! //<-- This needs to be near the top, with the outlets
+    var selectedList = PFObject(className: "Lists") //<-- This needs to be near the top, with the outlets
     // December 4 code end
     
     
@@ -26,6 +26,12 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "\(name2)"
+        itemTableView.dataSource = self
+        itemTableView.delegate = self
+        
+        
         
         //Dec 5 beginning
         //We need to do a query for the list that matches the globalObjectId so that we can access it to retrieve the items (The list is assigned to selectedList)
@@ -50,11 +56,10 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
        
         
-        itemTableView.dataSource = self
-        itemTableView.delegate = self
-        navigationItem.title = "\(name2)"
+
         
-        self.itemTableView.reloadData()
+        
+        //self.itemTableView.reloadData()
         /*
         let url = URL(string: "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=eplF2FxeKwU1y4OTCOEGGkFOWZIJDefYtadhtXoK")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
@@ -71,7 +76,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
          task.resume()
          */
-        self.itemTableView.reloadData()
+        //self.itemTableView.reloadData()
         
     }
     
@@ -81,6 +86,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //Dec 5 beginning
         //We need to do a query for the list that matches the globalObjectId so that we can access it to retrieve the items (The list is assigned to selectedList)
         let query = PFQuery(className:"Lists") //query inside Lists table
+        
         query.includeKeys(["name", "items"])
         query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
             if error == nil {
@@ -89,20 +95,39 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.itemTableView.reloadData()
                 // Success!
                 print("List with globalObjectId was found in ItemsViewController. The global id is \(globalObjectId)")
+                print("The count of items: \(self.items.count)")
             } else {
                 // Fail!
             }
         }
         
-        self.items = (self.selectedList["items"] as? [PFObject]) ?? [] //Array of PFObjects (rows of Items table) that have been added to the selectedList before.
+        //self.items = (self.selectedList["items"] as? [PFObject]) ?? [] //Array of PFObjects (rows of Items table) that have been added to the selectedList before.
         //print("Testing of printing: \(items[0]["name"])")
         
-        self.itemTableView.reloadData()
+        //self.itemTableView.reloadData()
         
         //Dec 5 end
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        let query = PFQuery(className:"Lists") //query inside Lists table
+        
+        query.includeKeys(["name", "items"])
+        query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
+            if error == nil {
+                self.selectedList = selectedList! // Set the found PFObject of type Lists to a variable accessible in this view controller.
+                self.items = (self.selectedList["items"] as? [PFObject]) ?? [] //Array of PFObjects (rows of Items table) that have been added to the selectedList before.
+                
+                // Success!
+                print("List with globalObjectId was found in ItemsViewController. The global id is \(globalObjectId)")
+                print("The count of items: \(self.items.count)")
+            } else {
+                // Fail!
+            }
+        }
+        
+
         
         return self.items.count
         //return 1 //debugging purposes
@@ -121,6 +146,24 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
         
         //Former place of items being assigned selectedList's items array.
+        
+        
+        
+        let query = PFQuery(className:"Lists") //query inside Lists table
+        
+        query.includeKeys(["name", "items"])
+        query.getObjectInBackground(withId: globalObjectId) { (selectedList, error) in //use globalObjectId as the Lists table row's Id (We set this in the ListViewController swift file).
+            if error == nil {
+                self.selectedList = selectedList! // Set the found PFObject of type Lists to a variable accessible in this view controller.
+                self.items = (self.selectedList["items"] as? [PFObject]) ?? [] //Array of PFObjects (rows of Items table) that have been added to the selectedList before.
+                
+                // Success!
+                print("List with globalObjectId was found in ItemsViewController. The global id is \(globalObjectId)")
+                print("The count of items: \(self.items.count)")
+            } else {
+                // Fail!
+            }
+        }
         
         let item = items[indexPath.row] //An individual element of that array. indexPath.row is the Nth table cell, and we need the Nth item of the selectedList.
         
@@ -141,6 +184,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         //return cell
         //Old code above (pre December 4)
     }
+    
     
     
     

@@ -20,9 +20,9 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
     
     @IBAction func plusClicked(_ sender: Any) {
         print("plus pressed!")
-        if (startDismissing == 1) {
-            self.dismiss(animated: true, completion: nil)
-        }
+        
+        self.dismiss(animated: true, completion: nil)
+        
         
        
     }
