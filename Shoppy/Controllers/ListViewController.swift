@@ -8,6 +8,13 @@
 import UIKit
 import Parse
 
+
+// December 4 code, Oliver's transplant
+
+//This global variable will store the String version of the currently selected list, which is used to do a query for a specific list.
+var globalObjectId = ""
+// December 4 code end
+
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -15,6 +22,16 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
     }
+    
+    
+    
+    // December 4 code, Oliver's transplant
+    @IBAction func onViewList(_ sender: Any) { //There is an action outlet with the same name on ListCell.swift, it handles assigning a selected list's objectId to a global variable.
+        
+        self.performSegue(withIdentifier: "listInfoSegue", sender: nil) //Move to the Items View Controller
+       
+    }
+    // December 4 code end
     
     var lists = [PFObject]()
     
@@ -31,7 +48,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidAppear(animated)
         
         let query = PFQuery(className: "Lists").whereKey("creator", equalTo: PFUser.current()!)
-        query.includeKey("name")
+        query.includeKeys(["name", "items"])
         query.limit = 20
         
         query.findObjectsInBackground { (lists,error) in
@@ -53,6 +70,15 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.listTitle.text = (list["name"] as! String)
         
+        
+        // December 4 code, Oliver's transplant
+        cell.cellObjectId = list.objectId! //Assign the Nth list's objectId to the cell's cellObjectId variable. This lets code in the cell swift file to assign it to a global variable in it (Please see ListCell.swift)
+        
+        print("The objectId of list #\(indexPath.row) is \(list.objectId!)")
+        
+        // December 4 code end
+        
+        
         cell.listTitle.isUserInteractionEnabled = true
         
         return cell
@@ -70,7 +96,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let vc = storyboard?.instantiateViewController(withIdentifier: "ItemsViewController") as? ItemsViewController
         self.navigationController?.pushViewController(vc!, animated: true)
         let list = lists[indexPath.row]
-        vc?.name = list["name"] as! String
+        vc?.name2 = list["name"] as! String
     }
     
     @IBAction func onLogout(_ sender: Any) {

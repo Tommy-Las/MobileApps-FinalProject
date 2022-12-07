@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -120,6 +116,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hbs-mh-YG3">
+                                                    <rect key="frame" x="319" y="8" width="83" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="View List"/>
+                                                    <connections>
+                                                        <action selector="ViewList:" destination="Izy-l9-YAL" eventType="touchUpInside" id="Pvz-Fd-H5x"/>
+                                                        <action selector="onViewList:" destination="jEd-j7-dtY" eventType="touchUpInside" id="OXA-ol-64C"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="r1o-Le-BLQ" firstAttribute="leading" secondItem="5O6-Hl-ZfS" secondAttribute="leadingMargin" id="5Ky-9U-Eji"/>
@@ -337,9 +343,7 @@
                     <navigationItem key="navigationItem" id="v6B-s1-hN6">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="O0n-hI-8xT">
                             <connections>
-
                                 <segue destination="9ST-fh-uHB" kind="presentation" id="rHy-0C-v7O"/>
-
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="1EU-rJ-wev"/>
@@ -405,9 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4c-dL-HNn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="6735" y="582"/>
-
         </scene>
         <!--Searched Product View Controller-->
         <scene sceneID="CSL-m6-djZ">
@@ -462,11 +464,9 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                                     <connections>
-
                                                         <action selector="addProductToList:" destination="8Aq-kJ-Unz" eventType="touchUpInside" id="WT8-wG-sFh"/>
                                                         <action selector="plusClicked:" destination="9ST-fh-uHB" eventType="touchUpInside" id="1Rj-hO-iCh"/>
                                                         <action selector="selectCandidateItem:" destination="8Aq-kJ-Unz" eventType="touchUpInside" id="92D-2s-0vv"/>
-
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -507,9 +507,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gi2-kG-kQK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-
             <point key="canvasLocation" x="5207" y="582"/>
-
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gUg-hl-426">
