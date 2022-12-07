@@ -26,11 +26,11 @@ Our application aims to provide small scale businesses an outlet to recommend th
 
 **Required Must-have Stories**
 
-- [ ] The user must be able to search for items
+- [x] The user must be able to search for items
 - [x] The user must be able to log in upon opening application
 - [ ] The system must display each item's price, location, and picture
-- [ ] The user must be able to create a shopping list
-- [ ] The user must be able to edit and delete a shopping list
+- [x] The user must be able to create a shopping list
+- [x] The user must be able to edit and delete a shopping list
 - [ ] The user must be able to add and remove items to their shopping list
 
 
