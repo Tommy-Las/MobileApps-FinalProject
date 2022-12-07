@@ -343,10 +343,14 @@
                     <navigationItem key="navigationItem" id="v6B-s1-hN6">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="O0n-hI-8xT">
                             <connections>
-                                <segue destination="9ST-fh-uHB" kind="presentation" id="rHy-0C-v7O"/>
+                                <action selector="logoutAccount:" destination="pXV-Dk-WaR" id="TeS-Xd-K0q"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1EU-rJ-wev"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1EU-rJ-wev">
+                            <connections>
+                                <segue destination="9ST-fh-uHB" kind="presentation" id="tZX-4K-YsU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="itemTableView" destination="R3E-aF-p7H" id="C1h-l6-WXO"/>
@@ -466,7 +470,6 @@
                                                     <connections>
                                                         <action selector="addProductToList:" destination="8Aq-kJ-Unz" eventType="touchUpInside" id="WT8-wG-sFh"/>
                                                         <action selector="plusClicked:" destination="9ST-fh-uHB" eventType="touchUpInside" id="1Rj-hO-iCh"/>
-                                                        <action selector="selectCandidateItem:" destination="8Aq-kJ-Unz" eventType="touchUpInside" id="92D-2s-0vv"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
