@@ -320,3 +320,9 @@ Sprint 12:
 
 <img src='http://g.recordit.co/6UHWyQ7vND.gif' width='' alt='Video Walkthrough' />
 https://submissions.us-east-1.linodeobjects.com/ios_university/rFieX10j.gif
+
+
+
+Sprint 13:
+
+<img src='https://media3.giphy.com/media/04AwAYTDlhmpM7tqXi/giphy.gif?cid=790b761157fc26513bf76fd3e4629d90fa39f46df2d8f939&rid=giphy.gif' width='' alt='Video Walkthrough' />
