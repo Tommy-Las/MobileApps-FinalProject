@@ -18,7 +18,10 @@ class ItemViewCell: UITableViewCell {
     
     
     
+
     @IBOutlet weak var productImage: UIImageView!
+    
+    
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var brandName: UILabel! //change description to brandName
     @IBOutlet weak var quantityValue: UILabel!
