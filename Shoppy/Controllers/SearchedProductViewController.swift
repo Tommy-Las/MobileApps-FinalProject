@@ -83,8 +83,9 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchedProductCell", for: indexPath) as! SearchedProductCell
         cell.productName.text = productArray[indexPath.row]["title"] as! String
         let imageURL = URL(string: productArray[indexPath.row]["image"] as! String) as! URL
+        cell.imageUrlStringCell = productArray[indexPath.row]["image"] as! String
         cell.productImage.af.setImage(withURL: imageURL)
-
+        //cell.imageUrlItem = imageURL
         cell.setData(with: productArray[indexPath.row])
         
         return cell

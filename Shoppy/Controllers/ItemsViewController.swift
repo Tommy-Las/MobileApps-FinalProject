@@ -27,7 +27,12 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "\(name2)"
+        
+        //viewController.title = "some title"
+        navigationItem.title = ""
+        
+        
+        
         itemTableView.dataSource = self
         itemTableView.delegate = self
         
@@ -46,10 +51,15 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 // Success!
                 print("List with globalObjectId was found in ItemsViewController. The global id is \(globalObjectId)")
                 print("The count of items: \(self.items.count)")
+                
+                self.name2 = (self.selectedList["name"] as? String)!
+                self.navigationItem.title = "List \"\(self.name2)\". # of items: \(self.selectedList["numberOfItems"]!)"
             } else {
                 // Fail!
             }
         }
+        
+        
         
         
         print("does this even get printed..?????")
@@ -169,7 +179,19 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         cell.itemName.text = item["name"] as! String //Access an attribute of that array element
         print("Printing item[name] value inside cell.........\(item["name"])")
-        //cell.brandName.text = item["brandName"] as! String //Access an attribute of that array element //Dec 4: This has to be set up later???
+        
+        //let imageFile = item["image"] as! PFFileObject
+        //let urlString = imageFile.url!
+        //let url = item["imageUrl"]! as? URL
+        
+       
+        
+        
+        let imageString = item["imageUrlString"] as! String
+        let imageURL = URL(string: imageString)!
+        cell.productImage.af.setImage(withURL: imageURL)
+        //cell.photoView.af.setImage(withURL: url!)
+        
         cell.quantityValue.text = item["quantity"] as! String //Access an attribute of that array element
         // cell.imageUrl = item["imageUrl"] as! String
         //^ Must add a cell variable for the image later.

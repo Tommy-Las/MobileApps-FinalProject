@@ -231,7 +231,7 @@
             </objects>
             <point key="canvasLocation" x="3294" y="-210"/>
         </scene>
-        <!--Items View Controller-->
+        <!--asd-->
         <scene sceneID="Ocn-H4-K6i">
             <objects>
                 <viewController storyboardIdentifier="ItemsViewController" id="pXV-Dk-WaR" customClass="ItemsViewController" customModule="Shoppy" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,7 +240,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="182" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="R3E-aF-p7H">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="33" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -260,14 +260,14 @@
                                                         <constraint firstAttribute="height" constant="127" id="oqM-M6-Kxj"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item LOL Name" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY2-Oo-bo3">
-                                                    <rect key="frame" x="160" y="25" width="131" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Item LOL Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY2-Oo-bo3">
+                                                    <rect key="frame" x="160" y="25" width="210" height="30"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ati-Hi-gSd">
-                                                    <rect key="frame" x="206" y="120" width="22" height="21"/>
+                                                    <rect key="frame" x="206" y="98.5" width="22" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="22" id="pdt-CJ-1ki"/>
                                                     </constraints>
@@ -276,7 +276,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-Cy-0kC">
-                                                    <rect key="frame" x="160" y="114" width="31" height="31"/>
+                                                    <rect key="frame" x="160" y="92.5" width="31" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="31" id="MfJ-Te-DEv"/>
                                                         <constraint firstAttribute="height" constant="31" id="rtl-tJ-RaR"/>
@@ -290,7 +290,7 @@
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0O3-ro-Hf1">
-                                                    <rect key="frame" x="243" y="114" width="31" height="31"/>
+                                                    <rect key="frame" x="243" y="92.5" width="31" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="31" id="Rej-Pf-i5a"/>
                                                         <constraint firstAttribute="width" constant="31" id="eqa-tr-S8o"/>
@@ -304,8 +304,8 @@
                                                         <action selector="onIncrement:" destination="keL-pB-AY6" eventType="touchUpInside" id="tXv-3q-FzL"/>
                                                     </connections>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfB-pO-F3D">
-                                                    <rect key="frame" x="160" y="55" width="95" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfB-pO-F3D">
+                                                    <rect key="frame" x="160" y="54.5" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -330,7 +330,7 @@
                                         <connections>
                                             <outlet property="brandName" destination="MfB-pO-F3D" id="J6t-FP-3cy"/>
                                             <outlet property="itemName" destination="PY2-Oo-bo3" id="eCJ-My-fve"/>
-                                            <outlet property="productImage" destination="kJg-Zm-U8Q" id="8oE-m4-mZn"/>
+                                            <outlet property="productImage" destination="kJg-Zm-U8Q" id="nXg-wk-Uw9"/>
                                             <outlet property="quantityValue" destination="Ati-Hi-gSd" id="RcG-kf-5A4"/>
                                         </connections>
                                     </tableViewCell>
@@ -340,7 +340,7 @@
                         <viewLayoutGuide key="safeArea" id="M80-km-5IB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="v6B-s1-hN6">
+                    <navigationItem key="navigationItem" title="asd" id="v6B-s1-hN6">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="O0n-hI-8xT">
                             <connections>
                                 <action selector="logoutAccount:" destination="pXV-Dk-WaR" id="TeS-Xd-K0q"/>

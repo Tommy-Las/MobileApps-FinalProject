@@ -24,6 +24,7 @@ class AddListViewController: UIViewController {
         list["name"] = listNameField.text!
         list["creator"] = PFUser.current()
         list["items"] = []
+        list["numberOfItems"] = 0
         
         
         list.saveInBackground { (success,error) in
