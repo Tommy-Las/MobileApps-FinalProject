@@ -9,23 +9,12 @@ import UIKit
 import Parse
 
 class ItemViewCell: UITableViewCell {
-    
-    
-    /*
-    weak var viewController: UIViewController? = nil
-    var value = 1
-     */
-    
-    
-    
 
     @IBOutlet weak var productImage: UIImageView!
-    
-    
     @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var brandName: UILabel! //change description to brandName
     @IBOutlet weak var quantityValue: UILabel!
-    //Dec 4: set up an image outlet!!!!
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()

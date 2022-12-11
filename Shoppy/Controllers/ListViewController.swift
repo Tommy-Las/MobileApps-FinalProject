@@ -19,19 +19,17 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     
-    
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
+        
     }
     
+
     
-    
-    // December 4 code, Oliver's transplant
     @IBAction func onViewList(_ sender: Any) { //There is an action outlet with the same name on ListCell.swift, it handles assigning a selected list's objectId to a global variable.
         
         self.performSegue(withIdentifier: "listInfoSegue", sender: nil) //Move to the Items View Controller
        
     }
-    // December 4 code end
     
     var lists = [PFObject]()
     
@@ -65,19 +63,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell") as! ListCell
-        
         let list = lists[indexPath.row]
         
         cell.listTitle.text = (list["name"] as! String)
-        
-        
-        // December 4 code, Oliver's transplant
+             
         cell.cellObjectId = list.objectId! //Assign the Nth list's objectId to the cell's cellObjectId variable. This lets code in the cell swift file to assign it to a global variable in it (Please see ListCell.swift)
-        
-        print("The objectId of list #\(indexPath.row) is \(list.objectId!)")
-        
-        // December 4 code end
-        
         
         cell.listTitle.isUserInteractionEnabled = true
         
@@ -96,7 +86,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let vc = storyboard?.instantiateViewController(withIdentifier: "ItemsViewController") as? ItemsViewController
         self.navigationController?.pushViewController(vc!, animated: true)
         let list = lists[indexPath.row]
-        vc?.name2 = list["name"] as! String
+        vc?.listName = list["name"] as! String
     }
     
     @IBAction func onLogout(_ sender: Any) {

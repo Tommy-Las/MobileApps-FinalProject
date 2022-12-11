@@ -16,11 +16,8 @@ class SearchedProductCell: UITableViewCell {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var productImage: UIImageView!
     
-   // var imageUrlItemString = "google.com" //THis already exists as a var below.......
 
-    var imageUrlStringCell = ""
-    
-
+    var imageUrlStringCell = "" //This is needed!
     var selectedList: PFObject! //<-- This needs to be near the top, with the outlets
 
     
@@ -30,9 +27,6 @@ class SearchedProductCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -50,32 +44,16 @@ class SearchedProductCell: UITableViewCell {
         var classImage = UIImage(named: "itemImage")
         
         
-        
         var name = data["title"] as! String
         var imageUrl = data["image"] as! String
         var quantity = productQuantity.text!
         
-        //DEC 4 transplant below
               
         let item = PFObject(className: "Items") //Create a single item row in the Items table
-        item["itemId"] = id //Dec 5: this PFObject attribute field can not be named "id" as its a reserved word in Parse: https://github.com/parse-community/parse-server/issues/6309
+        item["itemId"] = id //This PFObject attribute field can not be named "id" as its a reserved word in Parse: https://github.com/parse-community/parse-server/issues/6309
         item["name"] = name
-        
-        
-        
         item["imageUrlString"] = imageUrlStringCell
-        
-        
-
-        
-        
-        
-        
         item["quantity"] = quantity
-        
-        
-        
-        print("item name is \(item["name"]! )")
 
         //Search for the shopping list that is considered the current one, then assign it to selectedList.
         
@@ -107,12 +85,6 @@ class SearchedProductCell: UITableViewCell {
                 // Fail!
             }
         }
-        
-        
-        
-        
-        
-        //DEC 4 transplant end
         
                 
         //TODO: Add product to the current list in database here
