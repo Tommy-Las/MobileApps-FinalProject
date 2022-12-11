@@ -7,10 +7,8 @@
 
 import UIKit
 import AlamofireImage
-
 import Parse
 
-var startDismissing = 0
 
 class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -19,12 +17,9 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
     
     
     @IBAction func plusClicked(_ sender: Any) {
-        print("plus pressed!")
-        
+
         self.dismiss(animated: true, completion: nil)
         
-        
-       
     }
     
 
@@ -38,10 +33,6 @@ class SearchedProductViewController: UIViewController, UISearchBarDelegate, UITa
         tableView.dataSource = self
         tableView.delegate = self
 
-        startDismissing = 0 //This is for good luck
-        
-        self.dismiss(animated: true, completion: nil)
-       
 
         // Do any additional setup after loading the view.
     }
