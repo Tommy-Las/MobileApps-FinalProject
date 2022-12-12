@@ -35,6 +35,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "" //Needed!
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -44,6 +45,8 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        self.navigationItem.title = "Hello, \((PFUser.current()?.username)!)"
         
         let query = PFQuery(className: "Lists").whereKey("creator", equalTo: PFUser.current()!)
         query.includeKeys(["name", "items"])
