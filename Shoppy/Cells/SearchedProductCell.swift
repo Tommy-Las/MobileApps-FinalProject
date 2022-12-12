@@ -74,7 +74,7 @@ class SearchedProductCell: UITableViewCell {
                 self.selectedList.saveInBackground { (success, error) in //Observation: this should save the item in background as well???
                     if success {
                         print("Item saved to list successfully!")
-                        //print("\(selectedList["Items"][0]["name]"])")
+                        
                     } else {
                         print("Error saving item to list!")
                     }

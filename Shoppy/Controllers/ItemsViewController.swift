@@ -137,12 +137,13 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let item = items[indexPath.row] //An individual element of the array.
         
         cell.itemName.text = item["name"] as! String //Access an attribute of that array element
-        
+        cell.indexPathRowForCell = indexPath.row
     
         let imageString = item["imageUrlString"] as! String
         let imageURL = URL(string: imageString)!
         cell.productImage.af.setImage(withURL: imageURL)
 
+        
         
         cell.quantityValue.text = item["quantity"] as! String
      
@@ -174,13 +175,16 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     // Fail!
                 }
             }
-            
+            self.itemCount = self.itemCount - 1
             let item = self.items[indexPath.row]
             
+            self.selectedList["numberOfItems"] = (self.selectedList["numberOfItems"]! as? Int)! - 1
             
             item.deleteInBackground()
             self.items.remove(at: indexPath.row)
 
+            self.selectedList["items"] = self.items
+            
             self.selectedList.saveInBackground { (success, error) in
                 if success {
                     print("Item saved to list successfully!")
@@ -190,7 +194,15 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }
             
+            
+            
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            
+            self.viewDidAppear(true)
+            
+            //decrement the variable that controls row count
+            
+            
      
         }
     }
