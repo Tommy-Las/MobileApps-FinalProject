@@ -42,7 +42,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
                 
                 self.listName = (self.selectedList["name"] as? String)!
-                self.navigationItem.title = "List \"\(self.listName)\". # of items: \(self.selectedList["numberOfItems"]!)"
+                self.navigationItem.title = self.listName
                 self.itemCount = (self.selectedList["numberOfItems"]! as? Int)!
                 self.itemTableView.reloadData()
             } else {
@@ -86,8 +86,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.itemTableView.reloadData()
                 // Success!
                 
-                self.navigationItem.title = "List \"\(self.listName)\". # of items: \(self.selectedList["numberOfItems"]!)"
-            } else {
+                self.navigationItem.title = self.listName
                 // Fail!
             }
         }
@@ -134,18 +133,24 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
         
-        let item = items[indexPath.row] //An individual element of the array.
+        if (items.count != 0){
+            let item = items[indexPath.row] //An individual element of the array.
+            
+            cell.itemName.text = item["name"] as! String //Access an attribute of that array element
+            cell.indexPathRowForCell = indexPath.row
         
-        cell.itemName.text = item["name"] as! String //Access an attribute of that array element
-        cell.indexPathRowForCell = indexPath.row
-    
-        let imageString = item["imageUrlString"] as! String
-        let imageURL = URL(string: imageString)!
-        cell.productImage.af.setImage(withURL: imageURL)
+            let imageString = item["imageUrlString"] as! String
+            let imageURL = URL(string: imageString)!
+            cell.productImage.af.setImage(withURL: imageURL)
 
+            
+            
+            cell.quantityValue.text = item["quantity"] as! String
+        }
         
         
-        cell.quantityValue.text = item["quantity"] as! String
+        
+       
      
         return cell
         
