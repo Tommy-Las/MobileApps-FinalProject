@@ -326,3 +326,13 @@ https://submissions.us-east-1.linodeobjects.com/ios_university/rFieX10j.gif
 Sprint 13:
 
 <img src='https://media3.giphy.com/media/04AwAYTDlhmpM7tqXi/giphy.gif?cid=790b761157fc26513bf76fd3e4629d90fa39f46df2d8f939&rid=giphy.gif' width='' alt='Video Walkthrough' />
+
+Additional changes done after Spring 14 (before Demo):
+
+Images of items load properly, and quantities can be changed with decrement/increment buttons in Items View Controller, and as well as in a text input on Searched Product View Controller (decrement/increment buttons are here too)
+
+<img src='https://media2.giphy.com/media/4k8nEwAw2Nbe5ClD13/giphy.gif?cid=790b761116c4ac1c10c9523eb1acc05d95a25342c20fc2f8&rid=giphy.gif' width='' alt='Video Walkthrough' />
+
+Item deletion implemented
+
+<img src='https://media1.giphy.com/media/qrBEfvcSvNDgPrJJsS/giphy.gif?cid=790b7611977606c0ce0512ee6fc1ecaa631a01a7c3401dcf&rid=giphy.gif' width='' alt='Video Walkthrough' />
