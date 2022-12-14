@@ -35,7 +35,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "" //Needed!
+        self.navigationItem.title = "Hello, \((PFUser.current()?.username)!)"
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -109,7 +109,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func logoutAccount(_ sender: Any) {
         
-        //PFUser.logout()
+        PFUser.logOut()
         
         let main = UIStoryboard(name : "Main", bundle: nil)
         
