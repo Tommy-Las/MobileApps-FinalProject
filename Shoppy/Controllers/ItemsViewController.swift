@@ -4,7 +4,6 @@
 //
 //  Created by Fallon Falcone on 11/17/22.
 //
-
 import UIKit
 import Parse
 
@@ -39,7 +38,6 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if error == nil {
                 self.selectedList = selectedList! // Set the found PFObject of type Lists to a variable accessible in this view controller.
                 self.items = (self.selectedList["items"] as? [PFObject]) ?? [] //Array of PFObjects (rows of Items table) that have been added to the selectedList before.
-
                 
                 self.listName = (self.selectedList["name"] as? String)!
                 self.navigationItem.title = self.listName
@@ -103,7 +101,6 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.items = (self.selectedList["items"] as? [PFObject]) ?? [] //Array of PFObjects (rows of Items table) that have been added to the selectedList before.
                 
                 // Success!
-
             } else {
                 // Fail!
             }
@@ -127,7 +124,6 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.items = (self.selectedList["items"] as? [PFObject]) ?? [] //Array of PFObjects (rows of Items table) that have been added to the selectedList before.
                 
                 // Success!
-
             } else {
                 // Fail!
             }
@@ -216,7 +212,7 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func logoutAccount(_ sender: Any) {
         
-        //PFUser.logout()
+        PFUser.logOut()
         
         let main = UIStoryboard(name : "Main", bundle: nil)
         
@@ -238,7 +234,6 @@ class ItemsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.

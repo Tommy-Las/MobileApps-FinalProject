@@ -36,6 +36,29 @@ class SearchedProductCell: UITableViewCell {
         self.data = data
     }
 
+    
+    
+    @IBAction func onDecrement(_ sender: Any) {
+        let productQuantityAsInt = Int((productQuantity.text)!)! as Int
+        if productQuantityAsInt > 0 {
+            
+            productQuantity.text = String(productQuantityAsInt - 1)
+        }
+    }
+    
+
+    
+    
+    @IBAction func onIncrement(_ sender: Any) {
+        let productQuantityAsInt = Int((productQuantity.text)!)! as Int
+        
+        productQuantity.text = String(productQuantityAsInt + 1)
+        
+    }
+    
+    
+    
+    
     @IBAction func addProductToList(_ sender: Any) {
 
         //Data to be added to the list
@@ -85,6 +108,8 @@ class SearchedProductCell: UITableViewCell {
                 // Fail!
             }
         }
+        
+        
         
                 
         //TODO: Add product to the current list in database here
